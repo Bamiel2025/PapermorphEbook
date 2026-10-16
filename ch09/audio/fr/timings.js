@@ -2,7 +2,7 @@ window.TIMINGS = {
  "intro": {
   "dur": 9.168,
   "marks": {
-   "sub": 5.43
+   "sub": 5.365
   },
   "cues": [
    [
@@ -11,91 +11,91 @@ window.TIMINGS = {
    ],
    [
     2.382,
-    "Effort musculaire et syst\u00c3\u00a8me nerveux."
+    "Effort musculaire et syst\u00e8me nerveux."
    ],
    [
-    5.43,
-    "S V T \u00c2\u00b7 Cycle quatre, niveau quatri\u00c3\u00a8me."
+    5.365,
+    "S V T , Cycle quatre, niveau quatri\u00e8me."
    ]
   ]
  },
  "probleme": {
-  "dur": 17.256,
+  "dur": 12.024,
   "marks": {
-   "start": 0.493
+   "start": 0.102
   },
   "cues": [
    [
     0.102,
-    "\u00c2\u00ab Courir, sauter, attraper un ballon : lors d&#39;un effort physique, notre corps s&#39;adapte imm\u00c3\u00a9diatement gr\u00c3\u00a2ce \u00c3\u00a0 la coordination entre nos muscles, notre c\u00c5\u201cur, nos poumons et notre cerveau."
+    "\u00ab Courir, sauter, attraper un ballon : lors d\u2019un effort physique, notre corps s\u2019adapte imm\u00e9diatement gr\u00e2ce \u00e0 la coordination entre nos muscles, notre c\u0153ur, nos poumons et notre cerveau."
    ],
    [
-    16.042,
-    "\u00c2\u00bb"
+    0,
+    "\u00bb"
    ]
   ]
  },
  "n1": {
-  "dur": 24.144,
+  "dur": 17.928,
   "marks": {
-   "a": 9.766,
-   "b": 17.891
+   "a": 8.333,
+   "b": 13.776
   },
   "cues": [
    [
     0.102,
-    "Pendant l&#39;effort, les muscles consomment davantage de dioxyg\u00c3\u00a8ne et de glucose et rejettent plus de dioxyde de carbone et de chaleur."
+    "Pendant l\u2019effort, les muscles consomment davantage de dioxyg\u00e8ne et de glucose et rejettent plus de dioxyde de carbone et de chaleur."
    ],
    [
-    9.766,
-    "Pour les alimenter rapidement, le c\u00c5\u201cur bat plus vite et la respiration s&#39;acc\u00c3\u00a9l\u00c3\u00a8re."
+    8.333,
+    "Pour les alimenter rapidement, le c\u0153ur bat plus vite et la respiration s\u2019acc\u00e9l\u00e8re."
    ],
    [
-    17.891,
-    "La sueur permet d&#39;\u00c3\u00a9vacuer la chaleur produite par les muscles."
+    13.776,
+    "La sueur permet d\u2019\u00e9vacuer la chaleur produite par les muscles."
    ]
   ]
  },
  "n2": {
-  "dur": 21.408,
+  "dur": 20.04,
   "marks": {
-   "c": 8.346,
-   "d": 17.76
+   "c": 7.682,
+   "d": 16.393
   },
   "cues": [
    [
     0.102,
-    "Pour r\u00c3\u00a9agir \u00c3\u00a0 notre environnement, les organes des sens captent un stimulus et envoient un message nerveux sensitif au cerveau."
+    "Pour r\u00e9agir \u00e0 notre environnement, les organes des sens captent un stimulus et envoient un message nerveux sensitif au cerveau."
    ],
    [
-    8.346,
-    "Le cerveau analyse la situation et renvoie un message nerveux moteur par la moelle \u00c3\u00a9pini\u00c3\u00a8re et les nerfs moteurs vers les muscles, qui se contractent."
+    7.682,
+    "Le cerveau analyse la situation et renvoie un message nerveux moteur par la moelle \u00e9pini\u00e8re et les nerfs moteurs vers les muscles, qui se contractent."
    ],
    [
-    17.76,
+    16.393,
     "Les neurones communiquent entre eux au niveau des synapses."
    ]
   ]
  },
  "retenir": {
-  "dur": 17.016,
+  "dur": 11.328,
   "marks": {
    "r1": 0.102,
-   "r2": 11.849
+   "r2": 7.16
   },
   "cues": [
    [
     0.102,
-    "\u00c3\u20ac l&#39;effort : acc\u00c3\u00a9l\u00c3\u00a9ration du c\u00c5\u201cur et de la respiration pour apporter plus d&#39;O2 et de glucose aux muscles."
+    "\u00c0 l\u2019effort : acc\u00e9l\u00e9ration du c\u0153ur et de la respiration pour apporter plus d\u2019O2 et de glucose aux muscles."
    ],
    [
-    11.849,
-    "Organe des sens \u00e2\u2020\u2019 nerf sensitif \u00e2\u2020\u2019 cerveau \u00e2\u2020\u2019 nerf moteur \u00e2\u2020\u2019 muscle."
+    7.16,
+    "Organe des sens \u2192 nerf sensitif \u2192 cerveau \u2192 nerf moteur \u2192 muscle."
    ]
   ]
  },
  "savoir": {
-  "dur": 11.112,
+  "dur": 10.368,
   "marks": {
    "s": 1.914
   },
@@ -106,67 +106,67 @@ window.TIMINGS = {
    ],
    [
     1.914,
-    "Le cerveau humain compte pr\u00c3\u00a8s de 86 milliards de neurones qui communiquent \u00c3\u00a0 toute vitesse gr\u00c3\u00a2ce \u00c3\u00a0 de minuscules signaux \u00c3\u00a9lectriques et chimiques !"
+    "Le cerveau humain compte pr\u00e8s de 86 milliards de neurones qui communiquent \u00e0 toute vitesse grce \u00e0 de minuscules signaux \u00e9lectriques et chimiques !"
    ]
   ]
  },
  "wrap": {
-  "dur": 26.736,
+  "dur": 21.072,
   "marks": {
    "w1": 0.102,
-   "w2": 8.385,
-   "w3": 13.971,
-   "w4": 17.604
+   "w2": 7.083,
+   "w3": 12.331,
+   "w4": 15.964
   },
   "cues": [
    [
     0.102,
-    "Pendant l&#39;effort, le rythme cardiaque et respiratoire augmentent pour ravitailler les muscles en O2 et glucose."
+    "Pendant l\u2019effort, le rythme cardiaque et respiratoire augmentent pour ravitailler les muscles en O2 et glucose."
    ],
    [
-    8.385,
-    "Le cerveau re\u00c3\u00a7oit les messages des organes des sens et commande les mouvements des muscles."
+    7.083,
+    "Le cerveau re\u00e7oit les messages des organes des sens et commande les mouvements des muscles."
    ],
    [
-    13.971,
+    12.331,
     "Les neurones communiquent entre eux au niveau des synapses."
    ],
    [
-    17.604,
-    "Un bon sommeil et l&#39;absence d&#39;alcool ou de drogues pr\u00c3\u00a9servent la sant\u00c3\u00a9 du cerveau."
+    15.964,
+    "Un bon sommeil et l\u2019absence d\u2019alcool ou de drogues pr\u00e9servent la sant\u00e9 du cerveau."
    ]
   ]
  },
  "q1": {
-  "dur": 3.528,
-  "marks": {},
-  "cues": [
-   [
-    0.101,
-    "V\u00c3\u00a9rifions la lecture du cours."
-   ]
-  ]
- },
- "q2": {
-  "dur": 3.288,
-  "marks": {},
-  "cues": [
-   [
-    0.101,
-    "Une derni\u00c3\u00a8re v\u00c3\u00a9rification."
-   ]
-  ]
- },
- "finish": {
-  "dur": 7.92,
+  "dur": 2.76,
   "marks": {},
   "cues": [
    [
     0.102,
-    "Le chapitre trois virgule un est termin\u00c3\u00a9."
+    "V\u00e9rifions la lecture du cours."
+   ]
+  ]
+ },
+ "q2": {
+  "dur": 2.472,
+  "marks": {},
+  "cues": [
+   [
+    0.101,
+    "Une derni\u00e8re v\u00e9rification."
+   ]
+  ]
+ },
+ "finish": {
+  "dur": 7.272,
+  "marks": {},
+  "cues": [
+   [
+    0.102,
+    "Le chapitre trois virgule un est termin\u00e9."
    ],
    [
-    3.854,
+    3.203,
     "Appuie sur R pour le revoir, ou passe au chapitre suivant."
    ]
   ]

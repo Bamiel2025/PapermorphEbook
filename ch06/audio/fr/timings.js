@@ -1,6 +1,6 @@
 window.TIMINGS = {
  "intro": {
-  "dur": 9.576,
+  "dur": 9.648,
   "marks": {
    "sub": 5.846
   },
@@ -15,91 +15,91 @@ window.TIMINGS = {
    ],
    [
     5.846,
-    "S V T \u00c2\u00b7 Cycle quatre, niveau quatri\u00c3\u00a8me."
+    "S V T , Cycle quatre, niveau quatri\u00e8me."
    ]
   ]
  },
  "probleme": {
-  "dur": 14.376,
+  "dur": 12.6,
   "marks": {
-   "start": 0.518
+   "start": 0.102
   },
   "cues": [
    [
-    0.101,
-    "\u00c2\u00ab Pour assurer la survie de leur esp\u00c3\u00a8ce, les \u00c3\u00aatres vivants se reproduisent."
+    0.102,
+    "\u00ab Pour assurer la survie de leur esp\u00e8ce, les \u00eatres vivants se reproduisent."
    ],
    [
-    5.456,
-    "Il existe deux grands modes de reproduction dans la nature : la reproduction sexu\u00c3\u00a9e et la reproduction asexu\u00c3\u00a9e."
+    5.104,
+    "Il existe deux grands modes de reproduction dans la nature : la reproduction sexu\u00e9e et la reproduction asexu\u00e9e."
    ],
    [
-    13.268,
-    "\u00c2\u00bb"
+    0,
+    "\u00bb"
    ]
   ]
  },
  "n1": {
-  "dur": 33.816,
+  "dur": 27.12,
   "marks": {
-   "a": 12.565,
-   "b": 25.339
+   "a": 9.609,
+   "b": 20.078
   },
   "cues": [
    [
     0.102,
-    "La reproduction sexu\u00c3\u00a9e n\u00c3\u00a9cessite l&#39;union de deux gam\u00c3\u00a8tes : un gam\u00c3\u00a8te m\u00c3\u00a2le (spermatozo\u00c3\u00afde ou grain de pollen) et un gam\u00c3\u00a8te femelle (ovule)."
+    "La reproduction sexu\u00e9e n\u00e9cessite l\u2019union de deux gam\u00e8tes : un gam\u00e8te mle (spermatozo\u00efde ou grain de pollen) et un gam\u00e8te femelle (ovule)."
    ],
    [
-    12.565,
-    "Cette union, la f\u00c3\u00a9condation, donne naissance \u00c3\u00a0 une cellule-\u00c5\u201cuf unique ; elle peut \u00c3\u00aatre externe (dans l&#39;eau) ou interne (mammif\u00c3\u00a8res, oiseaux, insectes)."
+    9.609,
+    "Cette union, la f\u00e9condation, donne naissance \u00e0 une cellule-\u0153uf unique ; elle peut \u00eatre externe (dans l\u2019eau) ou interne (mammif\u00e8res, oiseaux, insectes)."
    ],
    [
-    25.339,
-    "Chez les plantes \u00c3\u00a0 fleurs, les insectes et le vent transportent le pollen vers le pistil : c&#39;est la pollinisation."
+    20.078,
+    "Chez les plantes \u00e0 fleurs, les insectes et le vent transportent le pollen vers le pistil : c\u2019est la pollinisation."
    ]
   ]
  },
  "n2": {
-  "dur": 22.32,
+  "dur": 17.544,
   "marks": {
-   "c": 7.24,
-   "d": 14.53
+   "c": 5.182,
+   "d": 10.989
   },
   "cues": [
    [
     0.102,
-    "La reproduction asexu\u00c3\u00a9e ne n\u00c3\u00a9cessite ni partenaire ni f\u00c3\u00a9condation."
+    "La reproduction asexu\u00e9e ne n\u00e9cessite ni partenaire ni f\u00e9condation."
    ],
    [
-    7.24,
-    "Un seul individu donne naissance \u00c3\u00a0 des \u00c3\u00aatres vivants g\u00c3\u00a9n\u00c3\u00a9tiquement identiques : des clones."
+    5.182,
+    "Un seul individu donne naissance \u00e0 des \u00eatres vivants g\u00e9n\u00e9tiquement identiques : des clones."
    ],
    [
-    14.53,
-    "Exemples : les stolons du fraisier, les tubercules de pomme de terre, le bourgeonnement de l&#39;hydre."
+    10.989,
+    "Exemples : les stolons du fraisier, les tubercules de pomme de terre, le bourgeonnement de l\u2019hydre."
    ]
   ]
  },
  "retenir": {
-  "dur": 19.584,
+  "dur": 12.72,
   "marks": {
    "r1": 0.102,
-   "r2": 11.94
+   "r2": 6.979
   },
   "cues": [
    [
     0.102,
-    "Reproduction sexu\u00c3\u00a9e : rencontre d&#39;un gam\u00c3\u00a8te m\u00c3\u00a2le et d&#39;un gam\u00c3\u00a8te femelle \u00e2\u2020\u2019 f\u00c3\u00a9condation \u00e2\u2020\u2019 cellule-\u00c5\u201cuf unique."
+    "Reproduction sexu\u00e9e : rencontre d\u2019un gam\u00e8te mle et d\u2019un gam\u00e8te femelle \u2192 f\u00e9condation \u2192 cellule-\u0153uf unique."
    ],
    [
-    11.94,
-    "Reproduction asexu\u00c3\u00a9e : un seul parent cr\u00c3\u00a9e des copies identiques, tr\u00c3\u00a8s rapidement."
+    6.979,
+    "Reproduction asexu\u00e9e : un seul parent cr\u00e9e des copies identiques, tr\u00e8s rapidement."
    ]
   ]
  },
  "savoir": {
-  "dur": 14.808,
+  "dur": 11.544,
   "marks": {
    "s": 1.914
   },
@@ -110,67 +110,67 @@ window.TIMINGS = {
    ],
    [
     1.914,
-    "Chez les tortues marines, la temp\u00c3\u00a9rature du sable dans le nid d\u00c3\u00a9termine le sexe des b\u00c3\u00a9b\u00c3\u00a9s : sable ti\u00c3\u00a8de, m\u00c3\u00a2les ; sable tr\u00c3\u00a8s chaud, femelles."
+    "Chez les tortues marines, la temp\u00e9rature du sable dans le nid d\u00e9termine le sexe des b\u00e9b\u00e9s : sable ti\u00e8de, mles ; sable tr\u00e8s chaud, femelles."
    ]
   ]
  },
  "wrap": {
-  "dur": 30.576,
+  "dur": 25.296,
   "marks": {
    "w1": 0.102,
-   "w2": 9.388,
-   "w3": 16.354,
-   "w4": 23.503
+   "w2": 7.812,
+   "w3": 14.023,
+   "w4": 19.765
   },
   "cues": [
    [
     0.102,
-    "La reproduction sexu\u00c3\u00a9e fait intervenir deux gam\u00c3\u00a8tes (m\u00c3\u00a2le et femelle) et une f\u00c3\u00a9condation (interne ou externe)."
+    "La reproduction sexu\u00e9e fait intervenir deux gam\u00e8tes (mle et femelle) et une f\u00e9condation (interne ou externe)."
    ],
    [
-    9.388,
-    "La reproduction asexu\u00c3\u00a9e permet \u00c3\u00a0 un seul parent de produire rapidement des individus identiques."
+    7.812,
+    "La reproduction asexu\u00e9e permet \u00e0 un seul parent de produire rapidement des individus identiques."
    ],
    [
-    16.354,
-    "Les plantes \u00c3\u00a0 fleurs d\u00c3\u00a9pendent des insectes et du vent pour polliniser et diss\u00c3\u00a9miner leurs graines."
+    14.023,
+    "Les plantes \u00e0 fleurs d\u00e9pendent des insectes et du vent pour polliniser et diss\u00e9miner leurs graines."
    ],
    [
-    23.503,
-    "Le r\u00c3\u00a9chauffement climatique et les activit\u00c3\u00a9s humaines perturbent les cycles de reproduction."
+    19.765,
+    "Le r\u00e9chauffement climatique et les activit\u00e9s humaines perturbent les cycles de reproduction."
    ]
   ]
  },
  "q1": {
-  "dur": 3.528,
+  "dur": 2.76,
   "marks": {},
   "cues": [
    [
-    0.101,
-    "V\u00c3\u00a9rifions la lecture du cours."
+    0.102,
+    "V\u00e9rifions la lecture du cours."
    ]
   ]
  },
  "q2": {
-  "dur": 3.288,
+  "dur": 2.472,
   "marks": {},
   "cues": [
    [
     0.101,
-    "Une derni\u00c3\u00a8re v\u00c3\u00a9rification."
+    "Une derni\u00e8re v\u00e9rification."
    ]
   ]
  },
  "finish": {
-  "dur": 7.92,
+  "dur": 7.248,
   "marks": {},
   "cues": [
    [
-    0.101,
-    "Le chapitre deux virgule deux est termin\u00c3\u00a9."
+    0.102,
+    "Le chapitre deux virgule deux est termin\u00e9."
    ],
    [
-    3.841,
+    3.177,
     "Appuie sur R pour le revoir, ou passe au chapitre suivant."
    ]
   ]

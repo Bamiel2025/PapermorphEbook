@@ -1,8 +1,8 @@
 window.TIMINGS = {
  "intro": {
-  "dur": 12.744,
+  "dur": 9.552,
   "marks": {
-   "sub": 9.01
+   "sub": 5.794
   },
   "cues": [
    [
@@ -11,99 +11,99 @@ window.TIMINGS = {
    ],
    [
     2.552,
-    "Parent\u00c3\u00a9 et m\u00c3\u00a9canismes de l&#39;\u00c3\u00a9volution."
+    "Parent\u00e9 et m\u00e9canismes de l\u2019\u00e9volution."
    ],
    [
-    9.01,
-    "S V T \u00c2\u00b7 Cycle quatre, niveau troisi\u00c3\u00a8me."
+    5.794,
+    "S V T , Cycle quatre, niveau troisi\u00e8me."
    ]
   ]
  },
  "probleme": {
-  "dur": 22.44,
+  "dur": 13.008,
   "marks": {
-   "start": 0.558
+   "start": 0.102
   },
   "cues": [
    [
     0.102,
-    "\u00c2\u00ab La vie sur Terre est apparue il y a environ 3,8 milliards d&#39;ann\u00c3\u00a9es."
+    "\u00ab La vie sur Terre est apparue il y a environ 3,8 milliards d\u2019ann\u00e9es."
    ],
    [
-    7.069,
-    "Depuis, des millions d&#39;esp\u00c3\u00a8ces sont n\u00c3\u00a9es et ont \u00c3\u00a9volu\u00c3\u00a9."
+    4.673,
+    "Depuis, des millions d\u2019esp\u00e8ces sont n\u00e9es et ont \u00e9volu\u00e9."
    ],
    [
-    14.544,
-    "Quels sont les indices et les m\u00c3\u00a9canismes de l&#39;\u00c3\u00a9volution des esp\u00c3\u00a8ces ?"
+    8.893,
+    "Quels sont les indices et les m\u00e9canismes de l\u2019\u00e9volution des esp\u00e8ces ?"
    ],
    [
-    21.211,
-    "\u00c2\u00bb"
+    0,
+    "\u00bb"
    ]
   ]
  },
  "n1": {
-  "dur": 41.424,
+  "dur": 28.608,
   "marks": {
-   "a": 6.758,
-   "b": 22.891
+   "a": 4.531,
+   "b": 16.953
   },
   "cues": [
    [
     0.102,
-    "Tous les \u00c3\u00aatres vivants sont constitu\u00c3\u00a9s de cellules et poss\u00c3\u00a8dent de l&#39;ADN."
+    "Tous les \u00eatres vivants sont constitu\u00e9s de cellules et poss\u00e8dent de l\u2019ADN."
    ],
    [
-    6.758,
-    "Chez les vert\u00c3\u00a9br\u00c3\u00a9s t\u00c3\u00a9trapodes (humains, oiseaux, baleines, chauves-souris), le squelette des membres ant\u00c3\u00a9rieurs pr\u00c3\u00a9sente la m\u00c3\u00aame organisation osseuse : bras, avant-bras, poignet, doigts."
+    4.531,
+    "Chez les vert\u00e9br\u00e9s t\u00e9trapodes (humains, oiseaux, baleines, chauves-souris), le squelette des membres ant\u00e9rieurs pr\u00e9sente la m\u00eame organisation osseuse : bras, avant-bras, poignet, doigts."
    ],
    [
-    22.891,
-    "Ces ressemblances anatomiques, avec l&#39;universalit\u00c3\u00a9 de l&#39;ADN, prouvent que tous les \u00c3\u00aatres vivants sont apparent\u00c3\u00a9s : fossiles et caract\u00c3\u00a8res interm\u00c3\u00a9diaires, comme l&#39;Archaeopteryx, en t\u00c3\u00a9moignent."
+    16.953,
+    "Ces ressemblances anatomiques, avec l\u2019universalit\u00e9 de l\u2019ADN, prouvent que tous les \u00eatres vivants sont apparent\u00e9s : fossiles et caract\u00e8res interm\u00e9diaires, comme l\u2019Archaeopteryx, en t\u00e9moignent."
    ]
   ]
  },
  "n2": {
-  "dur": 28.08,
+  "dur": 22.56,
   "marks": {
-   "c": 7.161,
-   "d": 22.968
+   "c": 5.729,
+   "d": 17.46
   },
   "cues": [
    [
     0.102,
-    "Au sein d&#39;une esp\u00c3\u00a8ce, de petites variations (mutations) apparaissent au hasard."
+    "Au sein d\u2019une esp\u00e8ce, de petites variations (mutations) apparaissent au hasard."
    ],
    [
-    7.161,
-    "Si une particularit\u00c3\u00a9 donne un avantage pour survivre dans son milieu, l&#39;individu a plus de chances de grandir, de se reproduire et de transmettre ce caract\u00c3\u00a8re : c&#39;est la s\u00c3\u00a9lection naturelle."
+    5.729,
+    "Si une particularit\u00e9 donne un avantage pour survivre dans son milieu, l\u2019individu a plus de chances de grandir, de se reproduire et de transmettre ce caract\u00e8re : c\u2019est la s\u00e9lection naturelle."
    ],
    [
-    22.968,
+    17.46,
     "Exemple : les papillons sombres survivent mieux sur des troncs noircis par la suie."
    ]
   ]
  },
  "retenir": {
-  "dur": 15.792,
+  "dur": 13.056,
   "marks": {
    "r1": 0.102,
-   "r2": 7.146
+   "r2": 6.12
   },
   "cues": [
    [
     0.102,
-    "L&#39;ADN universel et les ressemblances anatomiques prouvent que tous les \u00c3\u00aatres vivants sont apparent\u00c3\u00a9s."
+    "L\u2019ADN universel et les ressemblances anatomiques prouvent que tous les \u00eatres vivants sont apparent\u00e9s."
    ],
    [
-    7.146,
-    "S\u00c3\u00a9lection naturelle : les individus les mieux adapt\u00c3\u00a9s \u00c3\u00a0 leur environnement survivent et transmettent leurs caract\u00c3\u00a8res."
+    6.12,
+    "S\u00e9lection naturelle : les individus les mieux adapt\u00e9s \u00e0 leur environnement survivent et transmettent leurs caract\u00e8res."
    ]
   ]
  },
  "savoir": {
-  "dur": 11.424,
+  "dur": 10.152,
   "marks": {
    "s": 1.914
   },
@@ -114,67 +114,67 @@ window.TIMINGS = {
    ],
    [
     1.914,
-    "Nous partageons plus de 98 pour cent de notre ADN avec le chimpanz\u00c3\u00a9, ce qui prouve notre proche parent\u00c3\u00a9 avec les grands singes."
+    "Nous partageons plus de 98 pour cent de notre ADN avec le chimpanz\u00e9, ce qui prouve notre proche parent\u00e9 avec les grands singes."
    ]
   ]
  },
  "wrap": {
-  "dur": 34.248,
+  "dur": 22.992,
   "marks": {
    "w1": 0.102,
-   "w2": 9.18,
-   "w3": 17.5,
-   "w4": 24.57
+   "w2": 6.028,
+   "w3": 11.016,
+   "w4": 17.174
   },
   "cues": [
    [
     0.102,
-    "L&#39;universalit\u00c3\u00a9 de la cellule et de l&#39;ADN prouve que tous les \u00c3\u00aatres vivants ont une origine commune."
+    "L\u2019universalit\u00e9 de la cellule et de l\u2019ADN prouve que tous les \u00eatres vivants ont une origine commune."
    ],
    [
-    9.18,
-    "L&#39;arbre de parent\u00c3\u00a9 classe les esp\u00c3\u00a8ces selon les caract\u00c3\u00a8res qu&#39;elles partagent."
+    6.028,
+    "L\u2019arbre de parent\u00e9 classe les esp\u00e8ces selon les caract\u00e8res qu\u2019elles partagent."
    ],
    [
-    17.5,
-    "La s\u00c3\u00a9lection naturelle favorise les individus porteurs de caract\u00c3\u00a8res avantageux pour leur milieu."
+    11.016,
+    "La s\u00e9lection naturelle favorise les individus porteurs de caract\u00e8res avantageux pour leur milieu."
    ],
    [
-    24.57,
-    "L&#39;\u00c3\u00aatre humain (Homo sapiens) est une esp\u00c3\u00a8ce parmi d&#39;autres au sein de l&#39;arbre du vivant."
+    17.174,
+    "L\u2019\u00eatre humain (Homo sapiens) est une esp\u00e8ce parmi d\u2019autres au sein de l\u2019arbre du vivant."
    ]
   ]
  },
  "q1": {
-  "dur": 3.528,
+  "dur": 2.76,
   "marks": {},
   "cues": [
    [
-    0.101,
-    "V\u00c3\u00a9rifions la lecture du cours."
+    0.102,
+    "V\u00e9rifions la lecture du cours."
    ]
   ]
  },
  "q2": {
-  "dur": 3.288,
+  "dur": 2.472,
   "marks": {},
   "cues": [
    [
     0.101,
-    "Une derni\u00c3\u00a8re v\u00c3\u00a9rification."
+    "Une derni\u00e8re v\u00e9rification."
    ]
   ]
  },
  "finish": {
-  "dur": 7.992,
+  "dur": 7.32,
   "marks": {},
   "cues": [
    [
-    0.101,
-    "Le chapitre deux virgule quatre est termin\u00c3\u00a9."
+    0.102,
+    "Le chapitre deux virgule quatre est termin\u00e9."
    ],
    [
-    3.919,
+    3.255,
     "Appuie sur R pour le revoir, ou passe au chapitre suivant."
    ]
   ]

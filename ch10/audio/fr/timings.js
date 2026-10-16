@@ -1,8 +1,8 @@
 window.TIMINGS = {
  "intro": {
-  "dur": 10.176,
+  "dur": 9.6,
   "marks": {
-   "sub": 6.523
+   "sub": 5.859
   },
   "cues": [
    [
@@ -11,95 +11,95 @@ window.TIMINGS = {
    ],
    [
     2.409,
-    "Alimentation, digestion et sant\u00c3\u00a9."
+    "Alimentation, digestion et sant\u00e9."
    ],
    [
-    6.523,
-    "S V T \u00c2\u00b7 Cycle quatre, niveau cinqui\u00c3\u00a8me."
+    5.859,
+    "S V T , Cycle quatre, niveau cinqui\u00e8me."
    ]
   ]
  },
  "probleme": {
-  "dur": 15.096,
+  "dur": 12.192,
   "marks": {
-   "start": 0.518
+   "start": 0.102
   },
   "cues": [
    [
     0.102,
-    "\u00c2\u00ab Chaque jour, nous mangeons des aliments (pain, fruits, viande)."
+    "\u00ab Chaque jour, nous mangeons des aliments (pain, fruits, viande)."
    ],
    [
-    5.547,
-    "Comment notre corps les transforme-t-il en minuscules \u00c3\u00a9l\u00c3\u00a9ments nutritifs capables de passer dans le sang pour nourrir nos cellules ?"
+    5.182,
+    "Comment notre corps les transforme-t-il en minuscules \u00e9l\u00e9ments nutritifs capables de passer dans le sang pour nourrir nos cellules ?"
    ],
    [
-    13.88,
-    "\u00c2\u00bb"
+    0,
+    "\u00bb"
    ]
   ]
  },
  "n1": {
-  "dur": 40.704,
+  "dur": 29.016,
   "marks": {
-   "a": 13.073,
-   "b": 30.208
+   "a": 9.896,
+   "b": 22.682
   },
   "cues": [
    [
     0.102,
-    "La digestion commence dans la bouche (les dents coupent et broient les aliments), se poursuit dans l&#39;estomac (brassage m\u00c3\u00a9canique) et se termine dans l&#39;intestin gr\u00c3\u00aale."
+    "La digestion commence dans la bouche (les dents coupent et broient les aliments), se poursuit dans l\u2019estomac (brassage m\u00e9canique) et se termine dans l\u2019intestin gr\u00eale."
    ],
    [
-    13.073,
-    "En m\u00c3\u00aame temps, les sucs digestifs contiennent des enzymes, comme de minuscules ciseaux, qui d\u00c3\u00a9coupent chimiquement les gros morceaux d&#39;aliments en \u00c3\u00a9l\u00c3\u00a9ments microscopiques : les nutriments (glucose, acides amin\u00c3\u00a9s)."
+    9.896,
+    "En m\u00eame temps, les sucs digestifs contiennent des enzymes, comme de minuscules ciseaux, qui d\u00e9coupent chimiquement les gros morceaux d\u2019aliments en \u00e9l\u00e9ments microscopiques : les nutriments (glucose, acides amin\u00e9s)."
    ],
    [
-    30.208,
-    "La salive contient d\u00c3\u00a9j\u00c3\u00a0 une enzyme qui commence \u00c3\u00a0 dig\u00c3\u00a9rer l&#39;amidon ; l&#39;estomac est un milieu acide."
+    22.682,
+    "La salive contient d\u00e9j\u00e0 une enzyme qui commence \u00e0 dig\u00e9rer l\u2019amidon ; l\u2019estomac est un milieu acide."
    ]
   ]
  },
  "n2": {
-  "dur": 37.08,
+  "dur": 23.76,
   "marks": {
-   "c": 13.945,
-   "d": 29.87
+   "c": 8.659,
+   "d": 18.385
   },
   "cues": [
    [
     0.102,
-    "Au niveau de l&#39;intestin gr\u00c3\u00aale, les nutriments traversent la paroi de l&#39;intestin pour entrer dans les vaisseaux sanguins : c&#39;est l&#39;absorption intestinale."
+    "Au niveau de l\u2019intestin gr\u00eale, les nutriments traversent la paroi de l\u2019intestin pour entrer dans les vaisseaux sanguins : c\u2019est l\u2019absorption intestinale."
    ],
    [
-    13.945,
-    "L&#39;intestin gr\u00c3\u00aale poss\u00c3\u00a8de des millions de minuscules replis appel\u00c3\u00a9s villosit\u00c3\u00a9s intestinales, qui offrent une immense surface d&#39;\u00c3\u00a9change (la taille d&#39;un terrain de tennis !)."
+    8.659,
+    "L\u2019intestin gr\u00eale poss\u00e8de des millions de minuscules replis appel\u00e9s villosit\u00e9s intestinales, qui offrent une immense surface d\u2019\u00e9change (la taille d\u2019un terrain de tennis !)."
    ],
    [
-    29.87,
-    "Les nutriments absorb\u00c3\u00a9s sont ensuite distribu\u00c3\u00a9s par le sang \u00c3\u00a0 tous les organes du corps."
+    18.385,
+    "Les nutriments absorb\u00e9s sont ensuite distribu\u00e9s par le sang \u00e0 tous les organes du corps."
    ]
   ]
  },
  "retenir": {
-  "dur": 15.504,
+  "dur": 11.592,
   "marks": {
    "r1": 0.102,
-   "r2": 6.654
+   "r2": 5.977
   },
   "cues": [
    [
     0.102,
-    "Aliments + broyage m\u00c3\u00a9canique + enzymes des sucs digestifs = nutriments solubles."
+    "Aliments + broyage m\u00e9canique + enzymes des sucs digestifs = nutriments solubles."
    ],
    [
-    6.654,
-    "L&#39;absorption des nutriments dans le sang a lieu au niveau des villosit\u00c3\u00a9s de l&#39;intestin gr\u00c3\u00aale."
+    5.977,
+    "L\u2019absorption des nutriments dans le sang a lieu au niveau des villosit\u00e9s de l\u2019intestin gr\u00eale."
    ]
   ]
  },
  "savoir": {
-  "dur": 16.2,
+  "dur": 11.112,
   "marks": {
    "s": 1.914
   },
@@ -110,67 +110,67 @@ window.TIMINGS = {
    ],
    [
     1.914,
-    "La paroi int\u00c3\u00a9rieure de notre intestin gr\u00c3\u00aale est tellement pliss\u00c3\u00a9e qu&#39;elle repr\u00c3\u00a9sente une surface de contact avec les aliments \u00c3\u00a9quivalente \u00c3\u00a0 environ 300 m\u00c3\u00a8tres carr\u00c3\u00a9s !"
+    "La paroi int\u00e9rieure de notre intestin gr\u00eale est tellement pliss\u00e9e qu\u2019elle repr\u00e9sente une surface de contact avec les aliments \u00e9quivalente \u00e0 environ 300 m\u00e8tres carr\u00e9s !"
    ]
   ]
  },
  "wrap": {
-  "dur": 29.352,
+  "dur": 22.896,
   "marks": {
    "w1": 0.102,
-   "w2": 7.5,
-   "w3": 16.68,
-   "w4": 21.055
+   "w2": 7.018,
+   "w3": 12.318,
+   "w4": 16.693
   },
   "cues": [
    [
     0.102,
-    "La digestion transforme les aliments en nutriments solubles gr\u00c3\u00a2ce aux actions m\u00c3\u00a9caniques et chimiques (enzymes)."
+    "La digestion transforme les aliments en nutriments solubles grce aux actions m\u00e9caniques et chimiques (enzymes)."
    ],
    [
-    7.5,
-    "L&#39;absorption intestinale se d\u00c3\u00a9roule au niveau des villosit\u00c3\u00a9s de l&#39;intestin gr\u00c3\u00aale."
+    7.018,
+    "L\u2019absorption intestinale se d\u00e9roule au niveau des villosit\u00e9s de l\u2019intestin gr\u00eale."
    ],
    [
-    16.68,
+    12.318,
     "Les nutriments passent dans le sang pour nourrir toutes les cellules du corps."
    ],
    [
-    21.055,
-    "Le microbiote intestinal et une alimentation \u00c3\u00a9quilibr\u00c3\u00a9e sont essentiels pour rester en bonne sant\u00c3\u00a9."
+    16.693,
+    "Le microbiote intestinal et une alimentation \u00e9quilibr\u00e9e sont essentiels pour rester en bonne sant\u00e9."
    ]
   ]
  },
  "q1": {
-  "dur": 3.528,
-  "marks": {},
-  "cues": [
-   [
-    0.101,
-    "V\u00c3\u00a9rifions la lecture du cours."
-   ]
-  ]
- },
- "q2": {
-  "dur": 3.288,
-  "marks": {},
-  "cues": [
-   [
-    0.101,
-    "Une derni\u00c3\u00a8re v\u00c3\u00a9rification."
-   ]
-  ]
- },
- "finish": {
-  "dur": 8.016,
+  "dur": 2.76,
   "marks": {},
   "cues": [
    [
     0.102,
-    "Le chapitre trois virgule deux est termin\u00c3\u00a9."
+    "V\u00e9rifions la lecture du cours."
+   ]
+  ]
+ },
+ "q2": {
+  "dur": 2.472,
+  "marks": {},
+  "cues": [
+   [
+    0.101,
+    "Une derni\u00e8re v\u00e9rification."
+   ]
+  ]
+ },
+ "finish": {
+  "dur": 7.368,
+  "marks": {},
+  "cues": [
+   [
+    0.102,
+    "Le chapitre trois virgule deux est termin\u00e9."
    ],
    [
-    3.945,
+    3.294,
     "Appuie sur R pour le revoir, ou passe au chapitre suivant."
    ]
   ]

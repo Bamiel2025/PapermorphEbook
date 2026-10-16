@@ -1,8 +1,8 @@
 window.TIMINGS = {
  "intro": {
-  "dur": 10.008,
+  "dur": 9.192,
   "marks": {
-   "sub": 6.276
+   "sub": 5.443
   },
   "cues": [
    [
@@ -11,95 +11,95 @@ window.TIMINGS = {
    ],
    [
     2.448,
-    "Ressources naturelles et \u00c3\u00a9cosyst\u00c3\u00a8mes."
+    "Ressources naturelles et \u00e9cosyst\u00e8mes."
    ],
    [
-    6.276,
-    "S V T \u00c2\u00b7 Cycle quatre, niveau troisi\u00c3\u00a8me."
+    5.443,
+    "S V T , Cycle quatre, niveau troisi\u00e8me."
    ]
   ]
  },
  "probleme": {
-  "dur": 17.544,
+  "dur": 11.16,
   "marks": {
-   "start": 0.545
+   "start": 0.102
   },
   "cues": [
    [
     0.102,
-    "\u00c2\u00ab Pour vivre, nous avons besoin d&#39;eau, de nourriture, de bois et d&#39;\u00c3\u00a9nergie."
+    "\u00ab Pour vivre, nous avons besoin d\u2019eau, de nourriture, de bois et d\u2019\u00e9nergie."
    ],
    [
-    9.388,
-    "Pr\u00c3\u00a9server ces ressources naturelles et la biodiversit\u00c3\u00a9 est essentiel pour notre avenir."
+    5.534,
+    "Pr\u00e9server ces ressources naturelles et la biodiversit\u00e9 est essentiel pour notre avenir."
    ],
    [
-    16.315,
-    "\u00c2\u00bb"
+    0,
+    "\u00bb"
    ]
   ]
  },
  "n1": {
-  "dur": 23.256,
+  "dur": 16.008,
   "marks": {
-   "a": 8.984,
-   "b": 18.229
+   "a": 6.574,
+   "b": 11.836
   },
   "cues": [
    [
     0.102,
-    "Le sol est un milieu vivant : il se forme tr\u00c3\u00a8s lentement, des centaines d&#39;ann\u00c3\u00a9es pour quelques centim\u00c3\u00a8tres."
+    "Le sol est un milieu vivant : il se forme tr\u00e8s lentement, des centaines d\u2019ann\u00e9es pour quelques centim\u00e8tres."
    ],
    [
-    8.984,
-    "Le b\u00c3\u00a9tonnage emp\u00c3\u00aache l&#39;eau de pluie de s&#39;infiltrer et ass\u00c3\u00a8che les nappes phr\u00c3\u00a9atiques."
+    6.574,
+    "Le b\u00e9tonnage emp\u00eache l\u2019eau de pluie de s\u2019infiltrer et ass\u00e8che les nappes phr\u00e9atiques."
    ],
    [
-    18.229,
-    "Les d\u00c3\u00a9composeurs transforment la liti\u00c3\u00a8re en humus fertile."
+    11.836,
+    "Les d\u00e9composeurs transforment la liti\u00e8re en humus fertile."
    ]
   ]
  },
  "n2": {
-  "dur": 24.552,
+  "dur": 17.736,
   "marks": {
-   "c": 6.068,
-   "d": 14.896
+   "c": 3.542,
+   "d": 9.987
   },
   "cues": [
    [
     0.102,
-    "L&#39;eau douce et les \u00c3\u00a9nergies fossiles sont limit\u00c3\u00a9es."
+    "L\u2019eau douce et les \u00e9nergies fossiles sont limit\u00e9es."
    ],
    [
-    6.068,
-    "Privil\u00c3\u00a9giez les \u00c3\u00a9nergies renouvelables : soleil, vent, eau \u00e2\u20ac\u201d in\u00c3\u00a9puisables et peu polluantes."
+    3.542,
+    "Privil\u00e9giez les \u00e9nergies renouvelables : soleil, vent, eau \u2014 in\u00e9puisables et peu polluantes."
    ],
    [
-    14.896,
-    "Les trames vertes, bleues et noires, avec les \u00c3\u00a9coducs, permettent aux animaux de circuler librement et en s\u00c3\u00a9curit\u00c3\u00a9."
+    9.987,
+    "Les trames vertes, bleues et noires, avec les \u00e9coducs, permettent aux animaux de circuler librement et en s\u00e9curit\u00e9."
    ]
   ]
  },
  "retenir": {
-  "dur": 14.64,
+  "dur": 10.176,
   "marks": {
-   "r1": 0.101,
-   "r2": 5.469
+   "r1": 0.102,
+   "r2": 4.673
   },
   "cues": [
    [
-    0.101,
-    "Le sol est vivant et pr\u00c3\u00a9cieux : il faut des si\u00c3\u00a8cles pour le fabriquer."
+    0.102,
+    "Le sol est vivant et pr\u00e9cieux : il faut des si\u00e8cles pour le fabriquer."
    ],
    [
-    5.469,
-    "\u00c3\u2030conomiser l&#39;eau et privil\u00c3\u00a9gier les \u00c3\u00a9nergies renouvelables pour prot\u00c3\u00a9ger la plan\u00c3\u00a8te."
+    4.673,
+    "\u00c9conomiser l\u2019eau et privil\u00e9gier les \u00e9nergies renouvelables pour prot\u00e9ger la plan\u00e8te."
    ]
   ]
  },
  "savoir": {
-  "dur": 14.184,
+  "dur": 8.064,
   "marks": {
    "s": 1.914
   },
@@ -110,67 +110,67 @@ window.TIMINGS = {
    ],
    [
     1.914,
-    "Une seule poign\u00c3\u00a9e de terre de for\u00c3\u00aat contient plus d&#39;\u00c3\u00aatres vivants minuscules qu&#39;il n&#39;y a d&#39;humains sur toute la Terre !"
+    "Une seule poign\u00e9e de terre de for\u00eat contient plus d\u2019\u00eatres vivants minuscules qu\u2019il n\u2019y a d\u2019humains sur toute la Terre !"
    ]
   ]
  },
  "wrap": {
-  "dur": 25.632,
+  "dur": 20.976,
   "marks": {
    "w1": 0.102,
-   "w2": 4.544,
-   "w3": 15.312,
-   "w4": 19.206
+   "w2": 4.414,
+   "w3": 11.354,
+   "w4": 15.247
   },
   "cues": [
    [
     0.102,
-    "Le sol est un milieu vivant fragile qui met des si\u00c3\u00a8cles \u00c3\u00a0 se former."
+    "Le sol est un milieu vivant fragile qui met des si\u00e8cles \u00e0 se former."
    ],
    [
-    4.544,
-    "L&#39;eau douce et les \u00c3\u00a9nergies fossiles sont limit\u00c3\u00a9es : il faut \u00c3\u00a9conomiser et utiliser les \u00c3\u00a9nergies renouvelables."
+    4.414,
+    "L\u2019eau douce et les \u00e9nergies fossiles sont limit\u00e9es : il faut \u00e9conomiser et utiliser les \u00e9nergies renouvelables."
    ],
    [
-    15.312,
+    11.354,
     "La fragmentation des milieux met les animaux en danger."
    ],
    [
-    19.206,
-    "Les trames vertes, bleues et noires permettent aux esp\u00c3\u00a8ces de se d\u00c3\u00a9placer et de survivre."
+    15.247,
+    "Les trames vertes, bleues et noires permettent aux esp\u00e8ces de se d\u00e9placer et de survivre."
    ]
   ]
  },
  "q1": {
-  "dur": 3.528,
+  "dur": 2.76,
   "marks": {},
   "cues": [
    [
-    0.101,
-    "V\u00c3\u00a9rifions la lecture du cours."
+    0.102,
+    "V\u00e9rifions la lecture du cours."
    ]
   ]
  },
  "q2": {
-  "dur": 3.288,
+  "dur": 2.472,
   "marks": {},
   "cues": [
    [
     0.101,
-    "Une derni\u00c3\u00a8re v\u00c3\u00a9rification."
+    "Une derni\u00e8re v\u00e9rification."
    ]
   ]
  },
  "finish": {
-  "dur": 7.872,
+  "dur": 7.224,
   "marks": {},
   "cues": [
    [
-    0.101,
-    "Le chapitre un virgule quatre est termin\u00c3\u00a9."
+    0.102,
+    "Le chapitre un virgule quatre est termin\u00e9."
    ],
    [
-    3.802,
+    3.151,
     "Appuie sur R pour le revoir, ou passe au chapitre suivant."
    ]
   ]
