@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MÃ©tÃ©orologie & climatologie â€” Ebook SVT Cycle 4</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+<style>
+  .screen .grid.text .row { grid-template-columns: minmax(0, 1fr) auto 40px; }
+  .screen .grid.text .why { padding-left: 0; }
+  .side .grid .row { grid-template-columns: 70px minmax(0, 1fr) 34px; }
+  .side .grid .why { padding-left: 86px; }
+</style>
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script src="../lib/lang-fr.js"></script>
+<script src="../lib/vocab.js"></script>
+<script src="audio/fr/timings.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 2, title: 'MÃ©tÃ©orologie & climatologie', minutes: 5, language: 'fr', next: '../ch03/' };
+
+const mline = (p, parts, x, y, t0, fill = COL.chalk, size = 48, anchor = 'middle') => { const e = M(p, [].concat(parts), { x, y, size, fill, anchor, o: 0 }); show(e, t0); return e; };
+const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start', weight = 500 } = {}) => { const e = T(p, str, { x, y, size, fill, anchor, weight, o: 0 }); show(e, t0); return e; };
+
+const BEATS = [
+  ['intro', 'TOPIC', (m, D) => {
+    const g = G(scene, { o: 0, y: 24 });
+    T(g, 'SVT Â· Cycle 4 Â· Chapitre 1.2', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'MÃ©tÃ©orologie &', { x: 800, y: 420, size: 80, weight: 600, anchor: 'middle' });
+    T(g, 'climatologie', { x: 800, y: 520, size: 80, weight: 600, anchor: 'middle' });
+    tw(g, { o: 1, y: 0 }, .2, 1.1, out);
+    const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
+    show(v, 1, .6);
+    const r = text(scene, 'MÃ©tÃ©o = temps qu'il fait aujourd'hui Â· climat = moyenne sur 30 ans.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
+  }],
+  ['probleme', 'MÃ©tÃ©o ou climat ?', (m) => {
+    const p = panel(0);
+    const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
+    show(card, .1, .5);
+    text(p, 'Chapitre 1.2 â€” MÃ©tÃ©orologie & climatologie', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['Â« La mÃ©tÃ©orologie nous informe sur le temps qu'il fait', 'au jour le jour, tandis que la climatologie', 'Ã©tudie les tendances du temps sur de trÃ¨s', 'longues pÃ©riodes (au moins trente ans). Â»'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
+    text(p, 'MÃ©tÃ©o = prÃ©visions Ã  quelques jours', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'Climat = tendances sur plusieurs dÃ©cennies', 1050, 290, .45, { size: 28, fill: COL.dim });
+    text(p, 'Carottes de glace : archives du climat passÃ©', 1050, 330, .7, { size: 28, fill: COL.dim });
+    const tx = G(p, { o: 0 });
+    mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
+    T(tx, '3 zones climatiques', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
+    T(tx, 'polaire Â· tempÃ©rÃ©e Â· chaude', { x: 1122, y: 615, size: 26, fill: COL.dim });
+    show(tx, m('start'), .6);
+    text(p, 'Les bulles d'air dans les glaces d'Antarctique racontent le climat d'il y a des centaines de milliers d'annÃ©es.', 160, 640, 1.2, { size: 27, fill: COL.dim });
+  }],
+  ['n1', 'MÃ©tÃ©o versus climat', (m) => {
+    const p = panel(0);
+    text(p, 'Deux Ã©chelles de temps', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'MÃ©tÃ©o', 'le temps qu'il fait aujourd'hui', C_VAC, m('a'));
+    pnum(p, 970, 260, 'Climat', 'moyenne sur â‰¥ 30 ans', C_VAC, m('b'));
+    text(p, 'Les carottes de glace polaire sont de vÃ©ritables archives du climat passÃ©.', 800, 470, m('b', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['n2', 'Vents, courants et effet de serre', (m, D) => {
+    const p = panel(0);
+    text(p, 'Le Soleil chauffe inÃ©galement la Terre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const g = bands(p, 430, 300, 700, 260, { topShare: .5, topCol: C_VIRUS, topLabel: 'Ã‰quateur Â· chaud', botLabel: 'PÃ´les Â· froid' });
+    bandsIn(g, m('c'));
+    const row = chipsRow(p, [
+      { t: 'Anticyclone : haute pression', col: C_VAC },
+      { t: 'DÃ©pression : basse pression', col: C_VIRUS },
+      { t: 'Vent : des hautes vers les basses pressions', col: C_EXTRA }
+    ], 300, 600, { size: 27 });
+    chipsIn(row, 0, m('d')); chipsIn(row, 1, m('d', .7)); chipsIn(row, 2, m('d', 1.4));
+    text(p, 'L'air chaud monte (dÃ©pression, pluie) Â· l'air froid descend (anticyclone, temps calme)', 800, 790, m('d', 2.2), { size: 28, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+    const p = panel(0);
+    text(p, 'Le cÅ“ur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'MÃ©tÃ©o', 'le temps qu'il fait aujourd'hui', C_VAC, m('r1'));
+    pnum(p, 970, 260, 'Climat', 'moyenne sur 30 ans ou plus', C_VAC, m('r2'));
+    text(p, 'Les vents et courants marins transportent la chaleur de l'Ã©quateur vers les pÃ´les.', 800, 470, m('r2', .6), { size: 32, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['savoir', 'Le saviez-vous ?', (m) => {
+    const p = panel(0);
+    text(p, 'Sans effet de serre naturel', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const n = T(p, 'âˆ’18 Â°C', { x: 800, y: 400, size: 96, fill: C_VIRUS, anchor: 'middle', weight: 700, o: 0 });
+    put(n, { s: .2 }); pop(n, m('s'));
+    text(p, 'TempÃ©rature moyenne de la Terre sans effet de serre naturel ; les ocÃ©ans seraient gelÃ©s.', 800, 540, m('s', .6), { size: 30, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['wrap', 'Bilan du chapitre', (m) => {
+    const p = panel(0);
+    [['La mÃ©tÃ©o s'intÃ©resse au temps immÃ©diat ; le climat est calculÃ© sur 30 ans minimum.', 'w1'],
+     ['L'inÃ©gale chaleur du Soleil crÃ©e les vents et les courants marins.', 'w2'],
+     ['L'effet de serre naturel permet une tempÃ©rature moyenne de +15 Â°C.', 'w3'],
+     ['Les activitÃ©s humaines Ã©mettent trop de gaz Ã  effet de serre : rÃ©chauffement climatique.', 'w4']].forEach(([str, mk_], i) => {
+      const g = G(p, { x: -16, y: 240 + i * 130, o: 0 });
+      mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
+      T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
+      T(g, str, { x: 260, size: 32, weight: 600 });
+      tw(g, { o: 1, x: 0 }, m(mk_), .6);
+    });
+  }],
+  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-meteo', prompt: ['Laquelle de ces affirmations relÃ¨ve du domaine de la climatologie ?'],
+      build: choice([['Il a plu 15 mm hier aprÃ¨s-midi Ã  Marseille.'], ['Une vigilance orange canicule est Ã©mise pour les 48 prochaines heures.'], ['La tempÃ©rature moyenne en Bretagne en juillet sur 1991-2020 est de 18,2 Â°C.'], ['Le vent souffle en rafales Ã  70 km/h ce matin.']], 2,
+        'Une moyenne calculÃ©e sur une pÃ©riode trentenaire (1991-2020) caractÃ©rise un climat ; les mesures instantanÃ©es ou prÃ©visions Ã  court terme relÃ¨vent de la mÃ©tÃ©o.',
+        [null, '15 mm hier aprÃ¨s-midi, c'est une mesure ponctuelle : de la mÃ©tÃ©o.', 'Une vigilance 48 heures, c'est une prÃ©vision Ã  court terme : de la mÃ©tÃ©o.', 'Trente ans de relevÃ©s = climat. C'est la bonne rÃ©ponse.']) },
+  ], done) }],
+  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-vent', prompt: ['Les masses d'air se dÃ©placent des zones de basse pression (dÃ©pression) vers les zones de haute pression (anticyclone).'],
+      build: choice([['VRAI'], ['FAUX']], 1,
+        'L'air se dÃ©place toujours des hautes pressions (anticyclones) vers les basses pressions (dÃ©pressions) pour combler le vide.',
+        [null, 'C'est le contraire : du sommet vers le creux.', 'L'anticyclone est la haute pression.']) },
+  ], done) }],
+  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
+
+boot();
+</script>
+</body>
+</html>

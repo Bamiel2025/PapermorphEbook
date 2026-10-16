@@ -1,0 +1,123 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reproduction & dynamique des populations â€” Ebook SVT Cycle 4</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+<style>
+  .screen .grid.text .row { grid-template-columns: minmax(0, 1fr) auto 40px; }
+  .screen .grid.text .why { padding-left: 0; }
+  .side .grid .row { grid-template-columns: 70px minmax(0, 1fr) 34px; }
+  .side .grid .why { padding-left: 86px; }
+</style>
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script src="../lib/lang-fr.js"></script>
+<script src="../lib/vocab.js"></script>
+<script src="audio/fr/timings.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 6, title: 'Reproduction & dynamique des populations', minutes: 5, language: 'fr', next: '../ch07/' };
+
+const mline = (p, parts, x, y, t0, fill = COL.chalk, size = 48, anchor = 'middle') => { const e = M(p, [].concat(parts), { x, y, size, fill, anchor, o: 0 }); show(e, t0); return e; };
+const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start', weight = 500 } = {}) => { const e = T(p, str, { x, y, size, fill, anchor, weight, o: 0 }); show(e, t0); return e; };
+
+const BEATS = [
+  ['intro', 'TOPIC', (m, D) => {
+    const g = G(scene, { o: 0, y: 24 });
+    T(g, 'SVT Â· Cycle 4 Â· Chapitre 2.2', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'Reproduction', { x: 800, y: 420, size: 84, weight: 600, anchor: 'middle' });
+    T(g, '& dynamique des populations', { x: 800, y: 520, size: 64, weight: 600, anchor: 'middle' });
+    tw(g, { o: 1, y: 0 }, .2, 1.1, out);
+    const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
+    show(v, 1, .6);
+    const r = text(scene, 'Deux grands modes : sexuÃ©e et asexuÃ©e.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
+  }],
+  ['probleme', 'Deux modes de reproduction', (m) => {
+    const p = panel(0);
+    const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
+    show(card, .1, .5);
+    text(p, 'Chapitre 2.2 â€” Reproduction & dynamique des populations', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['Â« Pour assurer la survie de leur espÃ¨ce,', 'les Ãªtres vivants se reproduisent.', 'Il existe deux grands modes', 'de reproduction dans la nature :', 'la reproduction sexuÃ©e et la reproduction asexuÃ©e. Â»'].forEach((l, i) => text(p, l, 160, 300 + i * 52, .5 + i * .25, { size: 34, fill: COL.chalk }));
+    text(p, 'Reproduction sexuÃ©e :', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'gamÃ¨te mÃ¢le + gamÃ¨te femelle', 1050, 290, .45, { size: 28, fill: C_VIRUS, weight: 700 });
+    text(p, 'â†’ fÃ©condation â†’ cellule-Å“uf', 1050, 340, .7, { size: 28, fill: C_VIRUS, weight: 700 });
+    text(p, 'Reproduction asexuÃ©e :', 1050, 400, .9, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'un seul parent â†’ clones trÃ¨s rapides', 1050, 460, 1.1, { size: 24, fill: C_SEUIL, weight: 700 });
+    const tx = G(p, { o: 0 });
+    mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
+    T(tx, 'Graines dispersÃ©es', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
+    T(tx, 'par le vent, les animaux ou l'eau', { x: 1122, y: 615, size: 26, fill: COL.dim });
+    show(tx, m('start'), .6);
+    text(p, 'La fÃ©condation peut Ãªtre externe (dans l'eau) ou interne (mammifÃ¨res, oiseaux, insectes).', 160, 640, 1.2, { size: 27, fill: COL.dim });
+  }],
+  ['n1', 'Reproduction sexuÃ©e', (m) => {
+    const p = panel(0);
+    text(p, 'GamÃ¨tes et fÃ©condation', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'GamÃ¨te mÃ¢le +', 'gamÃ¨te femelle', C_VIRUS, m('a'));
+    pnum(p, 970, 260, 'FÃ©condation', 'â†’ cellule-Å“uf unique', C_VAC, m('b'));
+    text(p, 'FÃ©condation externe (dans l'eau : oursin, truite) ou interne (mammifÃ¨res, oiseaux, insectes).', 800, 470, m('b', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['n2', 'Reproduction asexuÃ©e', (m) => {
+    const p = panel(0);
+    text(p, 'Se multiplier sans partenaire', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const row = chipsRow(p, [
+      { t: 'Un seul parent, pas de fÃ©condation', col: C_VIRUS },
+      { t: 'Individus gÃ©nÃ©tiquement identiques', col: C_CAS },
+      { t: 'Stolons, tubercules, bouturage', col: C_EXTRA }
+    ], 260, 330, { size: 27, gap: 80 });
+    chipsIn(row, 0, m('c')); chipsIn(row, 1, m('c', .7)); chipsIn(row, 2, m('d'));
+    text(p, 'Le fraisier produit des stolons qui s'enracinent ;', 800, 520, m('d', .9), { size: 28, fill: COL.dim, anchor: 'middle' });
+    text(p, 'l'hydre se multiplie par bourgeonnement.', 800, 566, m('d', 1.2), { size: 28, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+    const p = panel(0);
+    text(p, 'Le cÅ“ur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'SexuÃ©e', '2 gamÃ¨tes â†’ 1 cellule-Å“uf', C_VAC, m('r1'));
+    pnum(p, 970, 260, 'AsexuÃ©e', '1 parent â†’ clones rapides', C_SEUIL, m('r2'));
+    text(p, 'Le climat et les ressources alimentaires rÃ©gulent les naissances et la survie des espÃ¨ces.', 800, 470, m('r2', .6), { size: 28, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['savoir', 'Le saviez-vous ?', (m) => {
+    const p = panel(0);
+    text(p, 'Sexe et tempÃ©rature du sable', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    text(p, 'Chez les tortues marines,', 800, 400, m('s'), { size: 34, fill: COL.chalk, anchor: 'middle' });
+    text(p, 'la tempÃ©rature du sable du nid dÃ©termine', 800, 454, m('s', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'le sexe des bÃ©bÃ©s : tiÃ¨de = mÃ¢les,', 800, 494, m('s', .7), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'trÃ¨s chaud = femelles !', 800, 534, m('s', 1), { size: 30, fill: C_VIRUS, anchor: 'middle', weight: 700 });
+  }],
+  ['wrap', 'Bilan du chapitre', (m) => {
+    const p = panel(0);
+    [['La reproduction sexuÃ©e fait intervenir deux gamÃ¨tes (mÃ¢le et femelle) et une fÃ©condation (interne ou externe).', 'w1'],
+     ['La reproduction asexuÃ©e permet Ã  un seul parent de produire rapidement des individus identiques.', 'w2'],
+     ['Les plantes Ã  fleurs dÃ©pendent des insectes et du vent pour polliniser et dissÃ©miner leurs graines.', 'w3'],
+     ['Le rÃ©chauffement climatique et les activitÃ©s humaines perturbent les cycles de reproduction.', 'w4']].forEach(([str, mk_], i) => {
+      const g = G(p, { x: -16, y: 240 + i * 130, o: 0 });
+      mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
+      T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
+      T(g, str, { x: 260, size: 32, weight: 600 });
+      tw(g, { o: 1, x: 0 }, m(mk_), .6);
+    });
+  }],
+  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-fecondation', prompt: ['Chez quel organisme rencontre-t-on une fÃ©condation externe dans le milieu aquatique ?'],
+      build: choice([['Le chat domestique.'], ['L'oursin de mer.'], ['L'aigle royal.'], ['Le papillon machaon.']], 1,
+        'Les oursins libÃ¨rent leurs millions de gamÃ¨tes directement dans l'eau de mer oÃ¹ a lieu la fÃ©condation externe.',
+        [null, 'Le chat est un mammifÃ¨re : fÃ©condation interne.', 'L'aigle est un oiseau : fÃ©condation interne.', 'Le papillon fÃ©conde aussi de maniÃ¨re interne.']) },
+  ], done) }],
+  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-stolon', prompt: ['La reproduction asexuÃ©e par stolon chez le fraisier fait intervenir la fabrication de pollen et de graines.'],
+      build: choice([['VRAI'], ['FAUX']], 1,
+        'La reproduction asexuÃ©e se fait sans gamÃ¨tes ni fÃ©condation, uniquement par dÃ©veloppement d'une tige vÃ©gÃ©tative formant un clone.',
+        [null, 'Pas de gamÃ¨tes, pas de fÃ©condation en asexuÃ©e.', 'Les stolons sont des tiges de multiplication vÃ©gÃ©tative sans graines.']) },
+  ], done) }],
+  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
+
+boot();
+</script>
+</body>
+</html>

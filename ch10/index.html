@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alimentation, digestion & santÃ© â€” Ebook SVT Cycle 4</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+<style>
+  .screen .grid.text .row { grid-template-columns: minmax(0, 1fr) auto 40px; }
+  .screen .grid.text .why { padding-left: 0; }
+  .side .grid .row { grid-template-columns: 70px minmax(0, 1fr) 34px; }
+  .side .grid .why { padding-left: 86px; }
+</style>
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script src="../lib/lang-fr.js"></script>
+<script src="../lib/vocab.js"></script>
+<script src="audio/fr/timings.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 10, title: 'Alimentation, digestion & santÃ©', minutes: 5, language: 'fr', next: '../ch11/' };
+
+const mline = (p, parts, x, y, t0, fill = COL.chalk, size = 48, anchor = 'middle') => { const e = M(p, [].concat(parts), { x, y, size, fill, anchor, o: 0 }); show(e, t0); return e; };
+const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start', weight = 500 } = {}) => { const e = T(p, str, { x, y, size, fill, anchor, weight, o: 0 }); show(e, t0); return e; };
+
+const BEATS = [
+  ['intro', 'TOPIC', (m, D) => {
+    const g = G(scene, { o: 0, y: 24 });
+    T(g, 'SVT Â· Cycle 4 Â· Chapitre 3.2', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'Alimentation, digestion', { x: 800, y: 420, size: 74, weight: 600, anchor: 'middle' });
+    T(g, '& santÃ©', { x: 800, y: 510, size: 74, weight: 600, anchor: 'middle' });
+    tw(g, { o: 1, y: 0 }, .2, 1.1, out);
+    const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
+    show(v, 1, .6);
+    const r = text(scene, 'Comment les aliments deviennent-ils des nutriments pour nos cellules ?', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
+  }],
+  ['probleme', 'Du repas Ã  la cellule', (m) => {
+    const p = panel(0);
+    const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
+    show(card, .1, .5);
+    text(p, 'Chapitre 3.2 â€” Alimentation, digestion & santÃ©', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['Â« Chaque jour, nous mangeons des aliments (pain, fruits, viande).', 'Comment notre corps les transforme-t-il en', 'minuscules Ã©lÃ©ments nutritifs capables de passer', 'dans le sang pour nourrir nos cellules ? Â»'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
+    text(p, 'Bouche â†’ Estomac â†’ Intestin grÃªle', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'mÃ©canique + chimique (enzymes)', 1050, 290, .45, { size: 24, fill: C_VIRUS, weight: 700 });
+    text(p, 'Absorption :', 1050, 350, .7, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'villositÃ©s de l'intestin grÃªle', 1050, 400, .9, { size: 28, fill: C_SEUIL, weight: 700 });
+    const tx = G(p, { o: 0 });
+    mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
+    T(tx, 'Microbiote intestinal', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
+    T(tx, 'bonnes bactÃ©ries indispensables', { x: 1122, y: 615, size: 26, fill: COL.dim });
+    show(tx, m('start'), .6);
+    text(p, 'La salive contient dÃ©jÃ  une enzyme qui digÃ¨re l'amidon.', 160, 640, 1.2, { size: 27, fill: COL.dim });
+  }],
+  ['n1', 'Digestion mÃ©canique et chimique', (m) => {
+    const p = panel(0);
+    text(p, 'Des aliments aux nutriments', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Bouche', 'dents coupent et broient', C_VIRUS, m('a'));
+    pnum(p, 970, 260, 'Estomac + intestin', 'sucs digestifs + enzymes', C_VAC, m('b'));
+    text(p, 'Les enzymes dÃ©coupent les gros morceaux d'aliments en Ã©lÃ©ments microscopiques : les nutriments (glucose, acides aminÃ©s).', 800, 470, m('b', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['n2', 'Absorption intestinale', (m) => {
+    const p = panel(0);
+    text(p, 'Le passage dans le sang', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const row = chipsRow(p, [
+      { t: 'Intestin grÃªle', col: C_CAS },
+      { t: 'VillositÃ©s intestinales', col: C_SEUIL },
+      { t: 'Surface â‰ˆ 300 mÂ² (terrain de tennis)', col: C_EXTRA }
+    ], 260, 330, { size: 26, gap: 80 });
+    chipsIn(row, 0, m('c')); chipsIn(row, 1, m('c', .7)); chipsIn(row, 2, m('d'));
+    text(p, 'Les nutriments absorbÃ©s sont distribuÃ©s par le sang Ã  tous les organes.', 800, 520, m('d', .9), { size: 28, fill: COL.dim, anchor: 'middle' });
+    text(p, 'Ce qui n'est pas digÃ©rÃ© (fibres) passe dans le gros intestin.', 800, 566, m('d', 1.2), { size: 28, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+    const p = panel(0);
+    text(p, 'Le cÅ“ur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Digestion', 'aliments + broyage + enzymes', C_VIRUS, m('r1'));
+    pnum(p, 970, 260, 'Absorption', 'nutriments solubles â†’ sang', C_SEUIL, m('r2'));
+    text(p, 'Le microbiote intestinal et une alimentation Ã©quilibrÃ©e sont essentiels pour rester en bonne santÃ©.', 800, 470, m('r2', .6), { size: 28, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['savoir', 'Le saviez-vous ?', (m) => {
+    const p = panel(0);
+    text(p, '~300 mÂ² de surface', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const n = T(p, 'd'Ã©change', { x: 800, y: 400, size: 44, fill: C_VIRUS, anchor: 'middle', weight: 700, o: 0 });
+    put(n, { s: .2 }); pop(n, m('s'));
+    text(p, 'grÃ¢ce aux replis et villositÃ©s de l'intestin grÃªle.', 800, 500, m('s', .6), { size: 30, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['wrap', 'Bilan du chapitre', (m) => {
+    const p = panel(0);
+    [['La digestion transforme les aliments en nutriments solubles grÃ¢ce aux actions mÃ©caniques et chimiques (enzymes).', 'w1'],
+     ['L'absorption intestinale se dÃ©roule au niveau des villositÃ©s de l'intestin grÃªle.', 'w2'],
+     ['Les nutriments passent dans le sang pour nourrir toutes les cellules du corps.', 'w3'],
+     ['Le microbiote intestinal et une alimentation Ã©quilibrÃ©e sont essentiels pour rester en bonne santÃ©.', 'w4']].forEach(([str, mk_], i) => {
+      const g = G(p, { x: -16, y: 240 + i * 130, o: 0 });
+      mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
+      T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
+      T(g, str, { x: 260, size: 32, weight: 600 });
+      tw(g, { o: 1, x: 0 }, m(mk_), .6);
+    });
+  }],
+  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-absorption', prompt: ['Dans quel organe du tube digestif la quasi-totalitÃ© des nutriments passe-t-elle dans le sang ?'],
+      build: choice([['Dans la bouche.'], ['Dans l'Å“sophage.'], ['Dans l'intestin grÃªle (au niveau des villositÃ©s).'], ['Dans la vÃ©sicule biliaire.']], 2,
+        'L'intestin grÃªle prÃ©sente une immense surface d'Ã©change plissÃ©e en villositÃ©s, optimisÃ©e pour le passage des nutriments dans le sang.',
+        [null, 'La bouche broie et commence la digestion, mais n'absorbe presque rien.', 'L'Å“sophage ne fait que transporter le bol alimentaire.', 'La vÃ©sicule biliaire stocke la bile, elle n'absorbe pas les nutriments.']) },
+  ], done) }],
+  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-enzymes', prompt: ['Les enzymes digestives transforment chimiquement les grosses molÃ©cules alimentaires en petits nutriments solubles.'],
+      build: choice([['VRAI'], ['FAUX']], 0,
+        'Vrai : c'est la dÃ©finition exacte de la digestion chimique enzymatique (ex. amylase, protÃ©ases, lipases).',
+        [null, 'Les enzymes agissent comme des ciseaux molÃ©culaires.', 'Elles coupent les aliments en nutriments solubles.']) },
+  ], done) }],
+  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
+
+boot();
+</script>
+</body>
+</html>

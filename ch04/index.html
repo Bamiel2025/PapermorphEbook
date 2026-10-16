@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ressources naturelles & Ã©cosystÃ¨mes â€” Ebook SVT Cycle 4</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+<style>
+  .screen .grid.text .row { grid-template-columns: minmax(0, 1fr) auto 40px; }
+  .screen .grid.text .why { padding-left: 0; }
+  .side .grid .row { grid-template-columns: 70px minmax(0, 1fr) 34px; }
+  .side .grid .why { padding-left: 86px; }
+</style>
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script src="../lib/lang-fr.js"></script>
+<script src="../lib/vocab.js"></script>
+<script src="audio/fr/timings.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 4, title: 'Ressources naturelles & Ã©cosystÃ¨mes', minutes: 5, language: 'fr', next: '../ch05/' };
+
+const mline = (p, parts, x, y, t0, fill = COL.chalk, size = 48, anchor = 'middle') => { const e = M(p, [].concat(parts), { x, y, size, fill, anchor, o: 0 }); show(e, t0); return e; };
+const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start', weight = 500 } = {}) => { const e = T(p, str, { x, y, size, fill, anchor, weight, o: 0 }); show(e, t0); return e; };
+
+const BEATS = [
+  ['intro', 'TOPIC', (m, D) => {
+    const g = G(scene, { o: 0, y: 24 });
+    T(g, 'SVT Â· Cycle 4 Â· Chapitre 1.4', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'Ressources naturelles', { x: 800, y: 420, size: 84, weight: 600, anchor: 'middle' });
+    T(g, '& Ã©cosystÃ¨mes', { x: 800, y: 520, size: 84, weight: 600, anchor: 'middle' });
+    tw(g, { o: 1, y: 0 }, .2, 1.1, out);
+    const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
+    show(v, 1, .6);
+    const r = text(scene, 'PrÃ©server les ressources naturelles et la biodiversitÃ©.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
+  }],
+  ['probleme', 'PrÃ©server la planÃ¨te', (m) => {
+    const p = panel(0);
+    const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
+    show(card, .1, .5);
+    text(p, 'Chapitre 1.4 â€” Ressources naturelles & Ã©cosystÃ¨mes', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['Â« Pour vivre, nous avons besoin d'eau, de nourriture,', 'de bois et d'Ã©nergie. PrÃ©server ces ressources', 'naturelles et la biodiversitÃ© est essentiel', 'pour notre avenir. Â»'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
+    text(p, 'Le sol se forme trÃ¨s lentement :', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'des centaines d'annÃ©es pour quelques centimÃ¨tres.', 1050, 290, .45, { size: 28, fill: COL.dim });
+    text(p, 'Le bÃ©tonnage empÃªche l'eau de pluie', 1050, 330, .7, { size: 28, fill: COL.dim });
+    text(p, 'de s'infiltrer et assÃ¨che les nappes phrÃ©atiques.', 1050, 370, .9, { size: 28, fill: COL.dim });
+    const tx = G(p, { o: 0 });
+    mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
+    T(tx, 'Trames vertes, bleues, noires', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
+    T(tx, 'les continuitÃ©s Ã©cologiques', { x: 1122, y: 615, size: 26, fill: COL.dim });
+    show(tx, m('start'), .6);
+    text(p, 'Les dÃ©composeurs transforment la litiÃ¨re en humus fertile.', 160, 640, 1.2, { size: 27, fill: COL.dim });
+  }],
+  ['n1', 'Le sol, une ressource vivante et fragile', (m) => {
+    const p = panel(0);
+    text(p, 'Un sol, Ã§a se mÃ©rite', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Plusieurs siÃ¨cles', 'pour quelques centimÃ¨tres de sol fertile', C_VIRUS, m('a'));
+    pnum(p, 970, 260, 'BÃ©tonnage', 'bloque l'infiltration, assÃ¨che les nappes', C_CAS, m('b'));
+    text(p, 'Les dÃ©composeurs transforment la litiÃ¨re en humus fertile.', 800, 470, m('b', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['n2', 'Ã‰nergies et trames Ã©cologiques', (m) => {
+    const p = panel(0);
+    text(p, 'Ã‰conomiser, renouveler, connecter', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const row = chipsRow(p, [
+      { t: 'Ã‰nergies fossiles : limitÃ©es, polluantes', col: C_VIRUS },
+      { t: 'Ã‰nergies renouvelables : soleil, vent, eau', col: C_SEUIL },
+      { t: 'Trames vertes, bleues, noires : Ã©coducs', col: C_CAS }
+    ], 260, 330, { size: 27, gap: 80 });
+    chipsIn(row, 0, m('c')); chipsIn(row, 1, m('c', .7)); chipsIn(row, 2, m('d'));
+    text(p, 'Les routes et les villes coupent les milieux naturels ;', 800, 520, m('d', .9), { size: 28, fill: COL.dim, anchor: 'middle' });
+    text(p, 'les trames Ã©cologiques recrÃ©ent les continuitÃ©s.', 800, 566, m('d', 1.2), { size: 28, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+    const p = panel(0);
+    text(p, 'Le cÅ“ur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Sol', 'des siÃ¨cles Ã  se former', C_VAC, m('r1'));
+    pnum(p, 970, 260, 'Ã‰nergie', 'renouvelables Ã  privilÃ©gier', C_SEUIL, m('r2'));
+    text(p, 'Ã‰conomiser l'eau et privilÃ©gier les Ã©nergies renouvelables pour protÃ©ger la planÃ¨te.', 800, 470, m('r2', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['savoir', 'Le saviez-vous ?', (m) => {
+    const p = panel(0);
+    text(p, 'La vie sous nos pieds', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    text(p, 'Une poignÃ©e de terre de forÃªt', 800, 400, m('s'), { size: 34, fill: COL.chalk, anchor: 'middle', weight: 600 });
+    text(p, 'contient plus d'Ãªtres vivants minuscules', 800, 454, m('s', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'qu'il n'y a d'humains sur toute la Terre !', 800, 494, m('s', .7), { size: 30, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['wrap', 'Bilan du chapitre', (m) => {
+    const p = panel(0);
+    [['Le sol est un milieu vivant fragile qui met des siÃ¨cles Ã  se former.', 'w1'],
+     ['L'eau douce et les Ã©nergies fossiles sont limitÃ©es.', 'w2'],
+     ['La fragmentation des milieux met les animaux en danger.', 'w3'],
+     ['Les trames vertes, bleues et noires permettent aux espÃ¨ces de se dÃ©placer et de survivre.', 'w4']].forEach(([str, mk_], i) => {
+      const g = G(p, { x: -16, y: 240 + i * 130, o: 0 });
+      mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
+      T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
+      T(g, str, { x: 260, size: 32, weight: 600 });
+      tw(g, { o: 1, x: 0 }, m(mk_), .6);
+    });
+  }],
+  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-sol', prompt: ['Combien de temps est nÃ©cessaire pour former quelques centimÃ¨tres de sol fertile en climat tempÃ©rÃ© ?'],
+      build: choice([['Quelques jours aprÃ¨s une forte pluie.'], ['Environ 2 Ã  3 mois au printemps.'], ['Plusieurs siÃ¨cles Ã  plusieurs milliers d'annÃ©es.'], ['Le sol ne se forme jamais.']], 2,
+        'La formation d'un sol par altÃ©ration de la roche-mÃ¨re et fabrication d'humus est un processus extrÃªmement lent (100 Ã  10 000 ans).',
+        [null, 'Quelques jours, c'est beaucoup trop court.', 'Quelques mois, ce serait dÃ©jÃ  rapide : la formation d'un sol prend des siÃ¨cles.', 'La bonne rÃ©ponse compte des siÃ¨cles Ã  des milliers d'annÃ©es.']) },
+  ], done) }],
+  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-trame', prompt: ['La Trame Noire consiste Ã  peindre les routes en noir pour rÃ©duire la chaleur absorbÃ©e par le sol.'],
+      build: choice([['VRAI'], ['FAUX']], 1,
+        'La Trame Noire est un rÃ©seau d'obscuritÃ© nocturne visant Ã  limiter l'Ã©clairage artificiel pour protÃ©ger les espÃ¨ces nocturnes (chauves-souris, chouettes, insectes).',
+        [null, 'Rien Ã  voir avec la couleur des routes.', 'C'est un rÃ©seau d'obscuritÃ© nocturne pour protÃ©ger la faune.']) },
+  ], done) }],
+  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
+
+boot();
+</script>
+</body>
+</html>

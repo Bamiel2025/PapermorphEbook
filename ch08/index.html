@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ParentÃ© & mÃ©canismes de l'Ã©volution â€” Ebook SVT Cycle 4</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+<style>
+  .screen .grid.text .row { grid-template-columns: minmax(0, 1fr) auto 40px; }
+  .screen .grid.text .why { padding-left: 0; }
+  .side .grid .row { grid-template-columns: 70px minmax(0, 1fr) 34px; }
+  .side .grid .why { padding-left: 86px; }
+</style>
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script src="../lib/lang-fr.js"></script>
+<script src="../lib/vocab.js"></script>
+<script src="audio/fr/timings.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 8, title: 'ParentÃ© & mÃ©canismes de l'Ã©volution', minutes: 6, language: 'fr', next: '../ch09/' };
+
+const mline = (p, parts, x, y, t0, fill = COL.chalk, size = 48, anchor = 'middle') => { const e = M(p, [].concat(parts), { x, y, size, fill, anchor, o: 0 }); show(e, t0); return e; };
+const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start', weight = 500 } = {}) => { const e = T(p, str, { x, y, size, fill, anchor, weight, o: 0 }); show(e, t0); return e; };
+
+const BEATS = [
+  ['intro', 'TOPIC', (m, D) => {
+    const g = G(scene, { o: 0, y: 24 });
+    T(g, 'SVT Â· Cycle 4 Â· Chapitre 2.4', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'ParentÃ© &', { x: 800, y: 420, size: 72, weight: 600, anchor: 'middle' });
+    T(g, 'Ã©volution', { x: 800, y: 510, size: 72, weight: 600, anchor: 'middle' });
+    tw(g, { o: 1, y: 0 }, .2, 1.1, out);
+    const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
+    show(v, 1, .6);
+    const r = text(scene, 'Quels sont les indices et les mÃ©canismes de l'Ã©volution des espÃ¨ces ?', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
+  }],
+  ['probleme', 'Dâ€™oÃ¹ venons-nous ?', (m) => {
+    const p = panel(0);
+    const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
+    show(card, .1, .5);
+    text(p, 'Chapitre 2.4 â€” ParentÃ© & mÃ©canismes de l'Ã©volution', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['Â« La vie sur Terre est apparue il y a environ 3,8 milliards d'annÃ©es.', 'Depuis, des millions d'espÃ¨ces sont nÃ©es et ont Ã©voluÃ©.', 'Quels sont les indices et les mÃ©canismes', 'de l'Ã©volution des espÃ¨ces ? Â»'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
+    text(p, 'ADN universel et squelette', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'des tÃ©trapodes : mÃªmes os.', 1050, 290, .45, { size: 28, fill: COL.dim });
+    text(p, 'Tous les vertÃ©brÃ©s partagent', 1050, 350, .7, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'un ancÃªtre commun.', 1050, 390, .9, { size: 28, fill: COL.dim });
+    const tx = G(p, { o: 0 });
+    mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
+    T(tx, 'Arbre de parentÃ©', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
+    T(tx, 'oiseaux = descendants des dinosaures', { x: 1122, y: 615, size: 26, fill: COL.dim });
+    show(tx, m('start'), .6);
+    text(p, 'L'Homme ne descend pas du singe : ils partagent un ancÃªtre commun.', 160, 640, 1.2, { size: 27, fill: COL.dim });
+  }],
+  ['n1', 'Preuves de la parentÃ©', (m) => {
+    const p = panel(0);
+    text(p, 'Toutes les cellules ont de l'ADN', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'ADN universel', '+ ressemblances anatomiques', C_VIRUS, m('a'));
+    pnum(p, 970, 260, 'Fossiles', '+ Archaeopteryx (plumes et dents)', C_VAC, m('b'));
+    text(p, 'Ces indices prouvent que tous les Ãªtres vivants ont une origine commune.', 800, 470, m('b', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['n2', 'SÃ©lection naturelle', (m) => {
+    const p = panel(0);
+    text(p, 'Le moteur de l'Ã©volution', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const row = chipsRow(p, [
+      { t: 'Variations (mutations) au hasard', col: C_VIRUS },
+      { t: 'Avantage â†’ survie & reproduction', col: C_CAS },
+      { t: 'Le caractÃ¨re se transmet', col: C_EXTRA }
+    ], 260, 330, { size: 27, gap: 80 });
+    chipsIn(row, 0, m('c')); chipsIn(row, 1, m('c', .7)); chipsIn(row, 2, m('d'));
+    text(p, 'Les papillons sombres survivent mieux sur des troncs', 800, 520, m('d', .9), { size: 28, fill: COL.dim, anchor: 'middle' });
+    text(p, 'noircis par la suie (phalÃ¨ne du bouleau).', 800, 566, m('d', 1.2), { size: 28, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+    const p = panel(0);
+    text(p, 'Le cÅ“ur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Preuves', 'ADN universel + squelettes ressemblants', C_VAC, m('r1'));
+    pnum(p, 970, 260, 'SÃ©lection naturelle', 'les mieux adaptÃ©s transmettent', C_SEUIL, m('r2'));
+    text(p, 'L'arbre de parentÃ© classe les espÃ¨ces selon les caractÃ¨res partagÃ©s.', 800, 470, m('r2', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['savoir', 'Le saviez-vous ?', (m) => {
+    const p = panel(0);
+    text(p, '98 % d'ADN commun', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const n = T(p, 'avec le chimpanzÃ©', { x: 800, y: 400, size: 44, fill: C_VIRUS, anchor: 'middle', weight: 700, o: 0 });
+    put(n, { s: .2 }); pop(n, m('s'));
+    text(p, 'Notre proche parentÃ© avec les grands singes.', 800, 500, m('s', .6), { size: 30, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['wrap', 'Bilan du chapitre', (m) => {
+    const p = panel(0);
+    [['L'universalitÃ© de la cellule et de l'ADN prouve que tous les Ãªtres vivants ont une origine commune.', 'w1'],
+     ['L'arbre de parentÃ© classe les espÃ¨ces selon les caractÃ¨res partagÃ©s.', 'w2'],
+     ['La sÃ©lection naturelle favorise les individus porteurs de caractÃ¨res avantageux pour leur milieu.', 'w3'],
+     ['L'Ãªtre humain (Homo sapiens) est une espÃ¨ce parmi d'autres au sein de l'arbre du vivant.', 'w4']].forEach(([str, mk_], i) => {
+      const g = G(p, { x: -16, y: 240 + i * 130, o: 0 });
+      mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
+      T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
+      T(g, str, { x: 260, size: 32, weight: 600 });
+      tw(g, { o: 1, x: 0 }, m(mk_), .6);
+    });
+  }],
+  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-girafe', prompt: ['Comment la thÃ©orie de Darwin explique-t-elle l'apparition d'un long cou chez les girafes ?'],
+      build: choice([['Les girafes ont tellement tirÃ© sur leur cou pour attraper les feuilles hautes que leur cou s'est allongÃ© et s'est transmis ainsi.'], ['Dans une population avec des variations de longueur de cou dues au hasard, les individus Ã  cou plus long accÃ©daient Ã  plus de nourriture, survivaient mieux et transmettaient leurs allÃ¨les favorables.'], ['Le climat a ordonnÃ© aux girafes de grandir instantanÃ©ment.'], ['Toutes les girafes courtes ont dÃ©cidÃ© de se transformer en zÃ¨bres.']], 1,
+        'C'est la sÃ©lection naturelle : la variabilitÃ© gÃ©nÃ©tique prÃ©existante est triÃ©e par l'environnement favorable Ã  ceux qui ont un meilleur accÃ¨s aux ressources.',
+        [null, 'C'est une idÃ©e de Lamarck (usage/dÃ©susage), pas de Darwin.', 'Les variations sont dues au hasard, pas Ã  un ordre du climat.', 'Les individus ne transforment pas leur corps par la volontÃ©.']) },
+  ], done) }],
+  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-homme', prompt: ['L'Homme descend directement du chimpanzÃ© actuel.'],
+      build: choice([['VRAI'], ['FAUX']], 1,
+        'Faux : l'Homme et le chimpanzÃ© sont des espÃ¨ces cousines qui partagent un ancÃªtre commun disparu ayant vÃ©cu il y a environ 7 millions d'annÃ©es.',
+        [null, 'L'Homme et le chimpanzÃ© sont cousins, pas parent direct.', 'Ils partagent un ancÃªtre commun disparu.']) },
+  ], done) }],
+  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
+
+boot();
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GÃ©nÃ©tique : diversitÃ© & stabilitÃ© â€” Ebook SVT Cycle 4</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+<style>
+  .screen .grid.text .row { grid-template-columns: minmax(0, 1fr) auto 40px; }
+  .screen .grid.text .why { padding-left: 0; }
+  .side .grid .row { grid-template-columns: 70px minmax(0, 1fr) 34px; }
+  .side .grid .why { padding-left: 86px; }
+</style>
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script src="../lib/lang-fr.js"></script>
+<script src="../lib/vocab.js"></script>
+<script src="audio/fr/timings.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 7, title: 'GÃ©nÃ©tique : diversitÃ© & stabilitÃ©', minutes: 6, language: 'fr', next: '../ch08/' };
+
+const mline = (p, parts, x, y, t0, fill = COL.chalk, size = 48, anchor = 'middle') => { const e = M(p, [].concat(parts), { x, y, size, fill, anchor, o: 0 }); show(e, t0); return e; };
+const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start', weight = 500 } = {}) => { const e = T(p, str, { x, y, size, fill, anchor, weight, o: 0 }); show(e, t0); return e; };
+
+const BEATS = [
+  ['intro', 'TOPIC', (m, D) => {
+    const g = G(scene, { o: 0, y: 24 });
+    T(g, 'SVT Â· Cycle 4 Â· Chapitre 2.3', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'GÃ©nÃ©tique', { x: 800, y: 420, size: 84, weight: 600, anchor: 'middle' });
+    T(g, 'diversitÃ© & stabilitÃ©', { x: 800, y: 520, size: 84, weight: 600, anchor: 'middle' });
+    tw(g, { o: 1, y: 0 }, .2, 1.1, out);
+    const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
+    show(v, 1, .6);
+    const r = text(scene, 'Pourquoi ressemblons-nous Ã  nos parents sans Ãªtre des copies conformes ?', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
+  }],
+  ['probleme', 'HÃ©rÃ©ditÃ© et caractÃ¨res', (m) => {
+    const p = panel(0);
+    const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
+    show(card, .1, .5);
+    text(p, 'Chapitre 2.3 â€” GÃ©nÃ©tique : diversitÃ© & stabilitÃ©', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['Â« Pourquoi ressemblons-nous Ã  nos parents sans Ãªtre', 'des copies conformes ? L'Ã©tude de la gÃ©nÃ©tique', 'permet de comprendre comment nos caractÃ¨res physiques', 'sont transmis de gÃ©nÃ©ration en gÃ©nÃ©ration. Â»'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
+    text(p, '23 paires de chromosomes (46)', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'dans le noyau de chaque cellule', 1050, 290, .45, { size: 28, fill: COL.dim });
+    text(p, 'ADN = double hÃ©lice', 1050, 330, .7, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'XX (femme) / XY (homme)', 1050, 390, .9, { size: 28, fill: COL.dim });
+    const tx = G(p, { o: 0 });
+    mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
+    T(tx, 'AllÃ¨les dominants / rÃ©cessifs', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
+    T(tx, 'exemple : groupe sanguin A sur O', { x: 1122, y: 615, size: 26, fill: COL.dim });
+    show(tx, m('start'), .6);
+    text(p, 'Un gÃ¨ne donne un caractÃ¨re ; les allÃ¨les en sont les diffÃ©rentes versions.', 160, 640, 1.2, { size: 27, fill: COL.dim });
+  }],
+  ['n1', 'Chromosomes et ADN', (m) => {
+    const p = panel(0);
+    text(p, 'Le plan de fabrication du corps', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, '23 paires', 'de chromosomes (46 au total)', C_VIRUS, m('a'));
+    pnum(p, 970, 260, 'ADN', 'double hÃ©lice, instructions de l'organisme', C_VAC, m('b'));
+    text(p, 'Une anomalie du nombre de chromosomes peut exister (ex. : trisomie 21).', 800, 470, m('b', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['n2', 'GÃ¨nes et allÃ¨les', (m) => {
+    const p = panel(0);
+    text(p, 'Les recettes de nos caractÃ¨res', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const row = chipsRow(p, [
+      { t: 'GÃ¨ne : dÃ©termine un caractÃ¨re', col: C_CAS },
+      { t: 'AllÃ¨le : une version du gÃ¨ne', col: C_SEUIL },
+      { t: 'Dominant sur rÃ©cessif : A sur O', col: C_EXTRA }
+    ], 260, 330, { size: 27, gap: 80 });
+    chipsIn(row, 0, m('c')); chipsIn(row, 1, m('c', .7)); chipsIn(row, 2, m('d'));
+    text(p, 'Nous possÃ©dons deux allÃ¨les par gÃ¨ne (un du pÃ¨re, un de la mÃ¨re).', 800, 520, m('d', .9), { size: 28, fill: COL.dim, anchor: 'middle' });
+    text(p, 'AllÃ¨les A et O â†’ groupe sanguin A.', 800, 566, m('d', 1.2), { size: 28, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+    const p = panel(0);
+    text(p, 'Le cÅ“ur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Chromosomes', '23 paires Â· ADN Â· XX / XY', C_VAC, m('r1'));
+    pnum(p, 970, 260, 'GÃ¨ne & allÃ¨le', 'caractÃ¨re â†’ version (dominant / rÃ©cessif)', C_SEUIL, m('r2'));
+    text(p, 'Les gamÃ¨tes ont 23 chromosomes ; la fÃ©condation au hasard crÃ©e un Ãªtre humain unique.', 800, 470, m('r2', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['savoir', 'Le saviez-vous ?', (m) => {
+    const p = panel(0);
+    text(p, 'L'ADN se dÃ©roule', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const n = T(p, 'â‰ˆ 2 mÃ¨tres', { x: 800, y: 400, size: 96, fill: C_VIRUS, anchor: 'middle', weight: 700, o: 0 });
+    put(n, { s: .2 }); pop(n, m('s'));
+    text(p, 'Longueur de l'ADN d'une seule cellule humaine, une fois dÃ©roulÃ©.', 800, 540, m('s', .6), { size: 30, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['wrap', 'Bilan du chapitre', (m) => {
+    const p = panel(0);
+    [['L'Ãªtre humain possÃ¨de 23 paires de chromosomes (46 au total) dans le noyau des cellules.', 'w1'],
+     ['L'ADN forme les chromosomes et porte les gÃ¨nes qui dÃ©terminent nos caractÃ¨res.', 'w2'],
+     ['Les allÃ¨les sont les diffÃ©rentes versions d'un gÃ¨ne (dominants ou rÃ©cessifs).', 'w3'],
+     ['Chaque gamÃ¨te contient 23 chromosomes ; la fÃ©condation au hasard crÃ©e un Ãªtre humain unique.', 'w4']].forEach(([str, mk_], i) => {
+      const g = G(p, { x: -16, y: 240 + i * 130, o: 0 });
+      mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
+      T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
+      T(g, str, { x: 260, size: 32, weight: 600 });
+      tw(g, { o: 1, x: 0 }, m(mk_), .6);
+    });
+  }],
+  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-groupe', prompt: ['Un enfant possÃ¨de pour le gÃ¨ne du groupe sanguin l'allÃ¨le A sur un chromosome et l'allÃ¨le O sur l'autre. Quel sera son groupe sanguin (phÃ©notype) ?'],
+      build: choice([['Groupe O, car O annule les autres allÃ¨les.'], ['Groupe A, car l'allÃ¨le A est dominant sur l'allÃ¨le O qui est rÃ©cessif.'], ['Groupe AO, un groupe intermÃ©diaire nouveau.'], ['Groupe B par mutation spontanÃ©e.']], 1,
+        'L'allÃ¨le A est dominant et l'allÃ¨le O est rÃ©cessif : le phÃ©notype exprimÃ© est donc le groupe A.',
+        [null, 'O est rÃ©cessif : il ne s'exprime pas en prÃ©sence de A.', 'A est dominant : il s'exprime toujours.', 'AO n'est pas un groupe sanguin intermÃ©diaire ici.']) },
+  ], done) }],
+  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-gamete', prompt: ['Un spermatozoÃ¯de humain normal contient 46 chromosomes complets.'],
+      build: choice([['VRAI'], ['FAUX']], 1,
+        'Faux : un gamÃ¨te (spermatozoÃ¯de ou ovule) contient 23 chromosomes simples (un seul de chaque paire) suite Ã  la mÃ©iose.',
+        [null, 'Les cellules du corps ont 46 chromosomes ; les gamÃ¨tes en ont 23.', 'La mÃ©iose divise le nombre de chromosomes par deux.']) },
+  ], done) }],
+  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
+
+boot();
+</script>
+</body>
+</html>

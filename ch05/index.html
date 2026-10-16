@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nutrition & organisation du vivant â€” Ebook SVT Cycle 4</title>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+<style>
+  .screen .grid.text .row { grid-template-columns: minmax(0, 1fr) auto 40px; }
+  .screen .grid.text .why { padding-left: 0; }
+  .side .grid .row { grid-template-columns: 70px minmax(0, 1fr) 34px; }
+  .side .grid .why { padding-left: 86px; }
+</style>
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script src="../lib/lang-fr.js"></script>
+<script src="../lib/vocab.js"></script>
+<script src="audio/fr/timings.js"></script>
+<script>
+'use strict';
+const CHAPTER = { number: 5, title: 'Nutrition & organisation du vivant', minutes: 5, language: 'fr', next: '../ch06/' };
+
+const mline = (p, parts, x, y, t0, fill = COL.chalk, size = 48, anchor = 'middle') => { const e = M(p, [].concat(parts), { x, y, size, fill, anchor, o: 0 }); show(e, t0); return e; };
+const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start', weight = 500 } = {}) => { const e = T(p, str, { x, y, size, fill, anchor, weight, o: 0 }); show(e, t0); return e; };
+
+const BEATS = [
+  ['intro', 'TOPIC', (m, D) => {
+    const g = G(scene, { o: 0, y: 24 });
+    T(g, 'SVT Â· Cycle 4 Â· Chapitre 2.1', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'Nutrition du', { x: 800, y: 420, size: 84, weight: 600, anchor: 'middle' });
+    T(g, 'vivant', { x: 800, y: 520, size: 84, weight: 600, anchor: 'middle' });
+    tw(g, { o: 1, y: 0 }, .2, 1.1, out);
+    const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
+    show(v, 1, .6);
+    const r = text(scene, 'Animaux et vÃ©gÃ©taux ne se nourrissent pas de la mÃªme faÃ§on.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
+  }],
+  ['probleme', 'Deux modes de nutrition', (m) => {
+    const p = panel(0);
+    const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
+    show(card, .1, .5);
+    text(p, 'Chapitre 2.1 â€” Nutrition & organisation du vivant', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['Â« Tous les Ãªtres vivants sont formÃ©s de cellules et ont besoin', 'd'Ã©nergie pour grandir et fonctionner.', 'Mais les animaux et les vÃ©gÃ©taux', 'ne se nourrissent pas de la mÃªme faÃ§on. Â»'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
+    text(p, 'Nutrition animale :', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'glucose + dioxygÃ¨ne â†’ Ã©nergie + CO2 + eau', 1050, 290, .45, { size: 28, fill: C_VIRUS, weight: 700 });
+    text(p, 'Nutrition vÃ©gÃ©tale :', 1050, 350, .7, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'lumiÃ¨re + eau + sels minÃ©raux + CO2 â†’ matiÃ¨re organique + O2', 1050, 410, .9, { size: 24, fill: C_SEUIL, weight: 700 });
+    const tx = G(p, { o: 0 });
+    mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
+    T(tx, 'Autotrophe vs hÃ©tÃ©rotrophe', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
+    T(tx, 'les plantes fabriquent leur nourriture', { x: 1122, y: 615, size: 26, fill: COL.dim });
+    show(tx, m('start'), .6);
+    text(p, 'Les stomates sont les petits pores des feuilles (Ã©changes gazeux).', 160, 640, 1.2, { size: 27, fill: COL.dim });
+  }],
+  ['n1', 'Nutrition des animaux', (m) => {
+    const p = panel(0);
+    text(p, 'La respiration cellulaire', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Glucose + O2', 'â†’ Ã©nergie + CO2 + eau', C_VIRUS, m('a'));
+    pnum(p, 970, 260, 'Cellules', 'consomment nutriments et dioxygÃ¨ne', C_VAC, m('b'));
+    text(p, 'Le sang transporte les nutriments et l'O2 vers tous les organes ; poumons et reins Ã©liminent les dÃ©chets.', 800, 470, m('b', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['n2', 'Nutrition des plantes', (m) => {
+    const p = panel(0);
+    text(p, 'La photosynthÃ¨se', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const row = chipsRow(p, [
+      { t: 'LumiÃ¨re + eau + sels minÃ©raux + CO2', col: C_CAS },
+      { t: 'â†’ matiÃ¨re organique (sucres)', col: C_SEUIL },
+      { t: 'â†’ rejet de dioxygÃ¨ne (O2)', col: C_EXTRA }
+    ], 260, 330, { size: 27, gap: 80 });
+    chipsIn(row, 0, m('c')); chipsIn(row, 1, m('c', .7)); chipsIn(row, 2, m('d'));
+    text(p, 'La sÃ¨ve brute monte des racines vers les feuilles ;', 800, 520, m('d', .9), { size: 28, fill: COL.dim, anchor: 'middle' });
+    text(p, 'la sÃ¨ve Ã©laborÃ©e, riche en sucres, nourrit toute la plante.', 800, 566, m('d', 1.2), { size: 28, fill: COL.dim, anchor: 'middle' });
+  }],
+  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+    const p = panel(0);
+    text(p, 'Deux Ã©quations Ã  connaÃ®tre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Animal', 'respiration cellulaire', C_VIRUS, m('r1'));
+    pnum(p, 970, 260, 'Plante verte', 'photosynthÃ¨se', C_SEUIL, m('r2'));
+    text(p, 'Les plantes stockent des rÃ©serves (amidon, sucres) dans les tubercules, bulbes et graines.', 800, 470, m('r2', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+  }],
+  ['savoir', 'Le saviez-vous ?', (m) => {
+    const p = panel(0);
+    text(p, "Van Helmont et le saule", 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    text(p, 'ArrosÃ© uniquement d'eau pendant 5 ans,', 800, 400, m('s'), { size: 30, fill: COL.chalk, anchor: 'middle' });
+    text(p, 'le saule a pris plus de 70 kg alors que', 800, 450, m('s', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'la terre n'a presque rien perdu en poids.', 800, 500, m('s', .7), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'Les plantes ne &#34;mangent&#34; pas la terre !', 800, 550, m('s', 1), { size: 30, fill: C_VIRUS, anchor: 'middle', weight: 700 });
+  }],
+  ['wrap', 'Bilan du chapitre', (m) => {
+    const p = panel(0);
+    [['Les animaux consomment des nutriments et du dioxygÃ¨ne pour produire de l'Ã©nergie (respiration cellulaire).', 'w1'],
+     ['Les plantes vertes rÃ©alisent la photosynthÃ¨se grÃ¢ce Ã  la lumiÃ¨re, Ã  l'eau, aux sels minÃ©raux et au CO2.', 'w2'],
+     ['La sÃ¨ve brute monte des racines et la sÃ¨ve Ã©laborÃ©e nourrit tous les organes de la plante.', 'w3'],
+     ['Les plantes stockent des rÃ©serves nutritives (bulbes, tubercules, graines) pour passer l'hiver.', 'w4']].forEach(([str, mk_], i) => {
+      const g = G(p, { x: -16, y: 240 + i * 130, o: 0 });
+      mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
+      T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
+      T(g, str, { x: 260, size: 32, weight: 600 });
+      tw(g, { o: 1, x: 0 }, m(mk_), .6);
+    });
+  }],
+  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-photosynthese', prompt: ['Quels sont les Ã©lÃ©ments indispensables pour que la photosynthÃ¨se ait lieu ?'],
+      build: choice([['L'obscuritÃ© totale, de la viande et de l'azote.'], ['De la lumiÃ¨re, du dioxyde de carbone (CO2), de l'eau et des sels minÃ©raux.'], ['Uniquement du dioxygÃ¨ne et du sucre.'], ['Un apport permanent d'engrais chimique sans lumiÃ¨re.']], 1,
+        'La photosynthÃ¨se utilise l'Ã©nergie lumineuse captÃ©e par la chlorophylle pour transformer eau, sels minÃ©raux et CO2 en matiÃ¨re organique, en rejetant du dioxygÃ¨ne.',
+        [null, 'La photosynthÃ¨se a besoin de lumiÃ¨re, pas d'obscuritÃ©.', 'La chlorophylle transforme l'Ã©nergie lumineuse en matiÃ¨re organique.', 'L'engrais aide, mais il ne remplace pas la lumiÃ¨re et le CO2.']) },
+  ], done) }],
+  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-seve', prompt: ['La sÃ¨ve Ã©laborÃ©e est produite au niveau des racines et ne contient que de l'eau pure.'],
+      build: choice([['VRAI'], ['FAUX']], 1,
+        'La sÃ¨ve brute monte des racines (eau + sels minÃ©raux). La sÃ¨ve Ã©laborÃ©e est produite dans les feuilles par photosynthÃ¨se et est riche en matiÃ¨re organique (sucres).',
+        [null, 'C'est la sÃ¨ve brute qui vient des racines.', 'La sÃ¨ve Ã©laborÃ©e contient les sucres fabriquÃ©s par les feuilles.']) },
+  ], done) }],
+  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
+
+boot();
+</script>
+</body>
+</html>
