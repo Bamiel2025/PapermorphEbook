@@ -100,13 +100,13 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-meteo', prompt: ['Laquelle de ces affirmations relève du domaine de la climatologie ?'],
       build: choice([['Il a plu 15 mm hier après-midi à Marseille.'], ['Une vigilance orange canicule est émise pour les 48 prochaines heures.'], ['La température moyenne en Bretagne en juillet sur 1991-2020 est de 18,2 °C.'], ['Le vent souffle en rafales à 70 km/h ce matin.']], 2,
         'Une moyenne calculée sur une période trentenaire (1991-2020) caractérise un climat ; les mesures instantanées ou prévisions à court terme relèvent de la météo.',
         [null, '15 mm hier après-midi, c’est une mesure ponctuelle : de la météo.', 'Une vigilance 48 heures, c’est une prévision à court terme : de la météo.', 'Trente ans de relevés = climat. C’est la bonne réponse.']) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-vent', prompt: ['Les masses d’air se déplacent des zones de basse pression (dépression) vers les zones de haute pression (anticyclone).'],
       build: choice([['VRAI'], ['FAUX']], 1,
         'L’air se déplace toujours des hautes pressions (anticyclones) vers les basses pressions (dépressions) pour combler le vide.',

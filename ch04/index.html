@@ -100,13 +100,13 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-sol', prompt: ['Combien de temps est nécessaire pour former quelques centimètres de sol fertile en climat tempéré ?'],
       build: choice([['Quelques jours après une forte pluie.'], ['Environ 2 à 3 mois au printemps.'], ['Plusieurs siècles à plusieurs milliers d’années.'], ['Le sol ne se forme jamais.']], 2,
         'La formation d’un sol par altération de la roche-mère et fabrication d’humus est un processus extrêmement lent (100 à 10 000 ans).',
         [null, 'Quelques jours, c’est beaucoup trop court.', 'Quelques mois, ce serait déjà rapide : la formation d’un sol prend des siècles.', 'La bonne réponse compte des siècles à des milliers d’années.']) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-trame', prompt: ['La Trame Noire consiste à peindre les routes en noir pour réduire la chaleur absorbée par le sol.'],
       build: choice([['VRAI'], ['FAUX']], 1,
         'La Trame Noire est un réseau d’obscurité nocturne visant à limiter l’éclairage artificiel pour protéger les espèces nocturnes (chauves-souris, chouettes, insectes).',

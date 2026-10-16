@@ -102,13 +102,13 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-fecondation', prompt: ['Chez quel organisme rencontre-t-on une fécondation externe dans le milieu aquatique ?'],
       build: choice([['Le chat domestique.'], ['L’oursin de mer.'], ['L’aigle royal.'], ['Le papillon machaon.']], 1,
         'Les oursins libèrent leurs millions de gamètes directement dans l’eau de mer où a lieu la fécondation externe.',
         [null, 'Le chat est un mammifère : fécondation interne.', 'L’aigle est un oiseau : fécondation interne.', 'Le papillon féconde aussi de manière interne.']) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-stolon', prompt: ['La reproduction asexuée par stolon chez le fraisier fait intervenir la fabrication de pollen et de graines.'],
       build: choice([['VRAI'], ['FAUX']], 1,
         'La reproduction asexuée se fait sans gamètes ni fécondation, uniquement par développement d’une tige végétative formant un clone.',

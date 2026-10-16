@@ -100,13 +100,13 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-antibio', prompt: ['Contre quel type d’agent infectieux les antibiotiques sont-ils exclusivement efficaces ?'],
       build: choice([['Contre les virus comme le virus de la grippe.'], ['Uniquement contre les bactéries.'], ['Contre tous les microbes sans exception.'], ['Uniquement contre le venin de serpent.']], 1,
         'Les antibiotiques ciblent des structures cellulaires bactériennes (comme la paroi bactérienne) et n’ont strictement aucun effet sur les virus.',
         [null, 'Les antibiotiques n’agissent pas sur les virus (grippe, rhume…).', 'Ils n’agissent que sur les bactéries.', 'Ils n’agissent pas sur le venin non plus.']) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-vaccin', prompt: ['La vaccination consiste à injecter un microbe mortel actif pour tuer immédiatement les globules blancs.'],
       build: choice([['VRAI'], ['FAUX']], 1,
         'La vaccination injecte un antigène inoffensif (ou atténué) pour entraîner le système immunitaire et créer des lymphocytes mémoires sans provoquer la maladie.',

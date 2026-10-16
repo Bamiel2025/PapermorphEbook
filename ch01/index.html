@@ -69,13 +69,13 @@ const BEATS = [
     const p = panel(0);
     text(p, 'Aux frontières des plaques', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
     const row = chipsRow(p, [
-      { t: 'Divergence · écartement', col: C_CAS },
-      { t: 'Convergence · rapprochement', col: C_VIRUS },
-      { t: 'Séismes, fosses, montagnes', col: C_EXTRA }
-    ], 300, 330, { size: 30 });
+      { t: 'Divergence', col: C_CAS },
+      { t: 'Convergence', col: C_VIRUS },
+      { t: 'Séismes · fosses · montagnes', col: C_EXTRA }
+    ], 260, 330, { size: 26, gap: 50 });
     chipsIn(row, 0, m('c')); chipsIn(row, 1, m('c', .7)); chipsIn(row, 2, m('d'));
-    text(p, 'Dorsales = création de plancher océanique ·', 800, 500, m('d', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
-    text(p, 'subduction et collision = empilement des roches', 800, 548, m('d', .6), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'Dorsales = création · subduction et collision = empilement', 800, 500, m('d', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, '(fosses, montagnes, séismes)', 800, 548, m('d', .6), { size: 30, fill: COL.dim, anchor: 'middle' });
   }],
   ['retenir', 'À retenir (B.O.)', (m) => {
     const p = panel(0);
@@ -104,11 +104,11 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-struct', prompt: ['Quelle est la différence fondamentale entre la lithosphère et l’asthénosphère ?'],
       build: blanks([{ parts: [{ box: 'rigide et cassante' }, ' (lithosphère) vs ', { box: 'solide et ductile' }, ' (asthénosphère)'], why: 'La lithosphère est rigide et cassante ; l’asthénosphère est solide mais déformable (ductile).', hint: 'Relis le paragraphe « La structure du globe ».' }]) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-foyer', prompt: ['Le foyer d’un séisme est toujours situé exactement en surface du sol.'],
       build: choice([['VRAI'], ['FAUX']], 1,
         'Le foyer (ou hypocentre) est le lieu de la rupture en profondeur ; l’épicentre est le point en surface à sa verticale.',

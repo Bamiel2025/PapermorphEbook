@@ -100,13 +100,13 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-groupe', prompt: ['Un enfant possède pour le gène du groupe sanguin l’allèle A sur un chromosome et l’allèle O sur l’autre. Quel sera son groupe sanguin (phénotype) ?'],
       build: choice([['Groupe O, car O annule les autres allèles.'], ['Groupe A, car l’allèle A est dominant sur l’allèle O qui est récessif.'], ['Groupe AO, un groupe intermédiaire nouveau.'], ['Groupe B par mutation spontanée.']], 1,
         'L’allèle A est dominant et l’allèle O est récessif : le phénotype exprimé est donc le groupe A.',
         [null, 'O est récessif : il ne s’exprime pas en présence de A.', 'A est dominant : il s’exprime toujours.', 'AO n’est pas un groupe sanguin intermédiaire ici.']) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-gamete', prompt: ['Un spermatozoïde humain normal contient 46 chromosomes complets.'],
       build: choice([['VRAI'], ['FAUX']], 1,
         'Faux : un gamète (spermatozoïde ou ovule) contient 23 chromosomes simples (un seul de chaque paire) suite à la méiose.',

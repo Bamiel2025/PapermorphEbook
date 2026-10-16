@@ -101,13 +101,13 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-risque', prompt: ['Dans quelle situation le risque sismique est-il le plus faible ?'],
       build: choice([['Dans une mégapole côtière sur une faille active, habitations précaires.'], ['Dans une zone désertique non habitée, même si l’aléa sismique y est très élevé.'], ['Dans une ville historique construite sur des alluvions instables.'], ['Dans une zone industrielle chimique près d’une faille géologique.']], 1,
         'Si les enjeux humains et matériels sont nuls (vulnérabilité = 0), le risque résultant est nul, même en présence d’un aléa fort.',
         [null, 'Beaucoup d’habitations précaires sur une faille active : risque très élevé.', 'Des maisons fragiles en zone d’alluvions instables : risque élevé.', 'La vulnérabilité nulle annule le risque, même avec un aléa fort.']) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-predire', prompt: ['Les sismologues sont aujourd’hui capables d’indiquer l’heure et la minute précises d’un séisme deux mois à l’avance.'],
       build: choice([['VRAI'], ['FAUX']], 1,
         'L’état actuel de la science ne permet pas de prédire la date et l’heure exacte d’un séisme.',

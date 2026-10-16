@@ -100,13 +100,13 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-girafe', prompt: ['Comment la théorie de Darwin explique-t-elle l’apparition d’un long cou chez les girafes ?'],
       build: choice([['Les girafes ont tellement tiré sur leur cou pour attraper les feuilles hautes que leur cou s’est allongé et s’est transmis ainsi.'], ['Dans une population avec des variations de longueur de cou dues au hasard, les individus à cou plus long accédaient à plus de nourriture, survivaient mieux et transmettaient leurs allèles favorables.'], ['Le climat a ordonné aux girafes de grandir instantanément.'], ['Toutes les girafes courtes ont décidé de se transformer en zèbres.']], 1,
         'C’est la sélection naturelle : la variabilité génétique préexistante est triée par l’environnement favorable à ceux qui ont un meilleur accès aux ressources.',
         [null, "C’est une idée de Lamarck (usage/désusage), pas de Darwin.", 'Les variations sont dues au hasard, pas à un ordre du climat.', 'Les individus ne transforment pas leur corps par la volonté.']) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-homme', prompt: ['L’Homme descend directement du chimpanzé actuel.'],
       build: choice([['VRAI'], ['FAUX']], 1,
         'Faux : l’Homme et le chimpanzé sont des espèces cousines qui partagent un ancêtre commun disparu ayant vécu il y a environ 7 millions d’années.',

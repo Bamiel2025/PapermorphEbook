@@ -100,13 +100,13 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-absorption', prompt: ['Dans quel organe du tube digestif la quasi-totalité des nutriments passe-t-elle dans le sang ?'],
       build: choice([['Dans la bouche.'], ['Dans l’œsophage.'], ['Dans l’intestin grêle (au niveau des villosités).'], ['Dans la vésicule biliaire.']], 2,
         'L’intestin grêle présente une immense surface d’échange plissée en villosités, optimisée pour le passage des nutriments dans le sang.',
         [null, 'La bouche broie et commence la digestion, mais n’absorbe presque rien.', "L’œsophage ne fait que transporter le bol alimentaire.", 'La vésicule biliaire stocke la bile, elle n’absorbe pas les nutriments.']) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-enzymes', prompt: ['Les enzymes digestives transforment chimiquement les grosses molécules alimentaires en petits nutriments solubles.'],
       build: choice([['VRAI'], ['FAUX']], 0,
         'Vrai : c’est la définition exacte de la digestion chimique enzymatique (ex. amylase, protéases, lipases).',

@@ -101,13 +101,13 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-photosynthese', prompt: ['Quels sont les éléments indispensables pour que la photosynthèse ait lieu ?'],
       build: choice([['L’obscurité totale, de la viande et de l’azote.'], ['De la lumière, du dioxyde de carbone (CO2), de l’eau et des sels minéraux.'], ['Uniquement du dioxygène et du sucre.'], ['Un apport permanent d’engrais chimique sans lumière.']], 1,
         'La photosynthèse utilise l’énergie lumineuse captée par la chlorophylle pour transformer eau, sels minéraux et CO2 en matière organique, en rejetant du dioxygène.',
         [null, 'La photosynthèse a besoin de lumière, pas d’obscurité.', 'La chlorophylle transforme l’énergie lumineuse en matière organique.', 'L’engrais aide, mais il ne remplace pas la lumière et le CO2.']) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-seve', prompt: ['La sève élaborée est produite au niveau des racines et ne contient que de l’eau pure.'],
       build: choice([['VRAI'], ['FAUX']], 1,
         'La sève brute monte des racines (eau + sels minéraux). La sève élaborée est produite dans les feuilles par photosynthèse et est riche en matière organique (sucres).',

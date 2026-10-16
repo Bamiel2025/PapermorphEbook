@@ -101,13 +101,13 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-preservatif', prompt: ['Quel est le seul moyen de contraception qui protège également contre les Infections Sexuellement Transmissibles (comme le VIH) ?'],
       build: choice([['La pilule contraceptive hormonale.'], ['Le stérilet en cuivre.'], ['Le préservatif (masculin ou féminin).'], ['Le calcul du jour théorique d’ovulation.']], 2,
         'Seul le préservatif forme une barrière physique étanche empêchant la transmission des virus et bactéries des IST.',
         [null, 'La pilule empêche l’ovulation mais ne protège pas des IST.', 'Le stérilet empêche la nidification mais ne protège pas des IST.', 'Le calcul de l’ovulation ne protège pas des IST.']) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-regles', prompt: ['Les règles correspondent à la destruction d’un os dans le bassin de la femme.'],
       build: choice([['VRAI'], ['FAUX']], 1,
         'Les règles correspondent à l’élimination de la couche superficielle de la muqueuse utérine (endomètre) gorgée de vaisseaux sanguins en l’absence de fécondation.',

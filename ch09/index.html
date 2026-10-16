@@ -101,13 +101,13 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-nerf', prompt: ['Lorsqu’un élève voit une balle arriver et l’attrape avec sa main, quel est l’ordre chronologique exact des étapes ?'],
       build: choice([['Muscle de la main → Cerveau → Œil → Nerf sensitif.'], ['Œil (récepteur) → Nerf sensitif → Cerveau (centre intégrateur) → Nerf moteur → Muscle de la main (effecteur).'], ['Cerveau → Œil → Muscle sans passage par les nerfs.'], ['Nerf moteur → Œil → Moelle épinière.']], 1,
         'L’organe récepteur capte le stimulus, le nerf sensitif achemine le message au cerveau, qui commande ensuite le muscle par le nerf moteur.',
         [null, 'Le stimulus part de l’œil, pas du muscle.', 'Le cerveau n’agit pas tout seul : il reçoit d’abord le message sensitif.', 'Le nerf moteur commande le muscle, il ne capte pas le stimulus.']) },
   ], done) }],
-  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(SCREEN, [
     { id: 'c-coeur', prompt: ['La fréquence cardiaque diminue fortement pendant un sprint pour économiser l’énergie du cœur.'],
       build: choice([['VRAI'], ['FAUX']], 1,
         'La fréquence cardiaque augmente pour accélérer le débit sanguin et acheminer davantage de dioxygène et de glucose aux muscles en activité.',
