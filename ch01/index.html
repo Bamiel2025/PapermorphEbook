@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Terre active & la tectonique des plaques â€” Ebook SVT Cycle 4</title>
+<title>La Terre active & la tectonique des plaques — Ebook SVT Cycle 4</title>
 <link rel="stylesheet" href="../lib/engine.css">
 <link rel="expect" href="#bar" blocking="render">
 <style>
@@ -28,75 +28,75 @@ const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start',
 const BEATS = [
   ['intro', 'TOPIC', (m, D) => {
     const g = G(scene, { o: 0, y: 24 });
-    T(g, 'SVT Â· Cycle 4 Â· Chapitre 1.1', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'SVT · Cycle 4 · Chapitre 1.1', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
     T(g, 'La Terre active', { x: 800, y: 420, size: 88, weight: 600, anchor: 'middle' });
     T(g, '& la tectonique des plaques', { x: 800, y: 520, size: 88, weight: 600, anchor: 'middle' });
     tw(g, { o: 1, y: 0 }, .2, 1.1, out);
     const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
     show(v, 1, .6);
-    const r = text(scene, 'SVT Â· Cycle 4, niveau 4e â€” La surface de la Terre n'est pas immobile.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    const r = text(scene, 'SVT · Cycle 4, niveau 4e — La surface de la Terre n’est pas immobile.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
     tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
   }],
   ['probleme', 'La Terre active', (m) => {
     const p = panel(0);
     const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
     show(card, .1, .5);
-    text(p, 'Chapitre 1.1 â€” La Terre active', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
-    ['Â« La surface de la Terre n'est pas immobile :', 'elle est dÃ©coupÃ©e en une douzaine de plaques', 'rigides appelÃ©es plaques tectoniques,', 'qui bougent de quelques centimÃ¨tres par an. Â»'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
-    text(p, 'Une plaque bouge de 1 Ã  10 cm par an :', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
-    text(p, 'imperceptible Ã  l'Ã©chelle humaine,', 1050, 290, .45, { size: 28, fill: COL.dim });
-    text(p, 'mais les continents traversent les ocÃ©ans', 1050, 330, .7, { size: 28, fill: COL.dim });
-    text(p, 'sur des millions d'annÃ©es.', 1050, 370, .9, { size: 28, fill: COL.dim });
+    text(p, 'Chapitre 1.1 — La Terre active', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['« La surface de la Terre n’est pas immobile :', 'elle est découpée en une douzaine de plaques', 'rigides appelées plaques tectoniques,', 'qui bougent de quelques centimètres par an. »'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
+    text(p, 'Une plaque bouge de 1 à 10 cm par an :', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'imperceptible à l’échelle humaine,', 1050, 290, .45, { size: 28, fill: COL.dim });
+    text(p, 'mais les continents traversent les océans', 1050, 330, .7, { size: 28, fill: COL.dim });
+    text(p, 'sur des millions d’années.', 1050, 370, .9, { size: 28, fill: COL.dim });
     const tx = G(p, { o: 0 });
     mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
-    T(tx, 'Dorsales Â· Subduction Â· Collision', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
-    T(tx, 'les trois grandes frontiÃ¨res', { x: 1122, y: 615, size: 26, fill: COL.dim });
+    T(tx, 'Dorsales · Subduction · Collision', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
+    T(tx, 'les trois grandes frontières', { x: 1122, y: 615, size: 26, fill: COL.dim });
     T(tx, 'des plaques tectoniques', { x: 1122, y: 651, size: 26, fill: COL.dim });
     show(tx, m('start'), .6);
     text(p, 'Le moteur du mouvement : la chaleur interne de la Terre.', 160, 640, 1.2, { size: 27, fill: COL.dim });
   }],
   ['n1', 'La structure du globe', (m) => {
     const p = panel(0);
-    text(p, 'LithosphÃ¨re et asthÃ©nosphÃ¨re', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    const g = bands(p, 430, 300, 700, 300, { topShare: .38, topCol: COL.task, topLabel: 'LithosphÃ¨re ~ 100 km Â· rigide', botLabel: 'AsthÃ©nosphÃ¨re Â· solide et ductile' });
+    text(p, 'Lithosphère et asthénosphère', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const g = bands(p, 430, 300, 700, 300, { topShare: .38, topCol: COL.task, topLabel: 'Lithosphère ~ 100 km · rigide', botLabel: 'Asthénosphère · solide et ductile' });
     bandsIn(g, m('a'));
-    text(p, 'Les plaques tectoniques se dÃ©placent de', 1250, 300, m('b', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
-    text(p, '1 Ã  10 cm par an', 1250, 352, m('b', .6), { size: 44, fill: C_VIRUS, anchor: 'middle', weight: 700 });
+    text(p, 'Les plaques tectoniques se déplacent de', 1250, 300, m('b', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, '1 à 10 cm par an', 1250, 352, m('b', .6), { size: 44, fill: C_VIRUS, anchor: 'middle', weight: 700 });
     text(p, 'Moteur : la chaleur interne de la Terre.', 1250, 420, m('b', 1.2), { size: 26, fill: COL.dim, anchor: 'middle' });
-    text(p, 'La lithosphÃ¨re est dÃ©coupÃ©e en une douzaine de plaques rigides.', 800, 680, m('b', 1.6), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'La lithosphère est découpée en une douzaine de plaques rigides.', 800, 680, m('b', 1.6), { size: 30, fill: COL.dim, anchor: 'middle' });
   }],
   ['n2', 'Divergence et convergence', (m) => {
     const p = panel(0);
-    text(p, 'Aux frontiÃ¨res des plaques', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    text(p, 'Aux frontières des plaques', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
     const row = chipsRow(p, [
-      { t: 'Divergence Â· Ã©cartement', col: C_CAS },
-      { t: 'Convergence Â· rapprochement', col: C_VIRUS },
-      { t: 'SÃ©ismes, fosses, montagnes', col: C_EXTRA }
+      { t: 'Divergence · écartement', col: C_CAS },
+      { t: 'Convergence · rapprochement', col: C_VIRUS },
+      { t: 'Séismes, fosses, montagnes', col: C_EXTRA }
     ], 300, 330, { size: 30 });
     chipsIn(row, 0, m('c')); chipsIn(row, 1, m('c', .7)); chipsIn(row, 2, m('d'));
-    text(p, 'Dorsales = crÃ©ation de plancher ocÃ©anique Â·', 800, 500, m('d', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'Dorsales = création de plancher océanique ·', 800, 500, m('d', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
     text(p, 'subduction et collision = empilement des roches', 800, 548, m('d', .6), { size: 30, fill: COL.dim, anchor: 'middle' });
   }],
-  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+  ['retenir', 'À retenir (B.O.)', (m) => {
     const p = panel(0);
-    text(p, 'Le cÅ“ur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    pnum(p, 330, 260, 'LithosphÃ¨re', 'enveloppe rigide ~ 100 km, cassante', C_VAC, m('r1'));
-    pnum(p, 970, 260, 'AsthÃ©nosphÃ¨re', 'solide mais dÃ©formable (ductile)', C_VAC, m('r2'));
-    text(p, 'La lithosphÃ¨re rigide (plaques) se dÃ©place sur l'asthÃ©nosphÃ¨re dÃ©formable.', 800, 470, m('r2', .6), { size: 32, fill: COL.dim, anchor: 'middle', weight: 600 });
+    text(p, 'Le cœur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Lithosphère', 'enveloppe rigide ~ 100 km, cassante', C_VAC, m('r1'));
+    pnum(p, 970, 260, 'Asthénosphère', 'solide mais déformable (ductile)', C_VAC, m('r2'));
+    text(p, 'La lithosphère rigide (plaques) se déplace sur l’asthénosphère déformable.', 800, 470, m('r2', .6), { size: 32, fill: COL.dim, anchor: 'middle', weight: 600 });
   }],
   ['savoir', 'Le saviez-vous ?', (m) => {
     const p = panel(0);
     text(p, 'La fosse des Mariannes', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    const n = T(p, 'âˆ’11 000 m', { x: 800, y: 400, size: 96, fill: C_VIRUS, anchor: 'middle', weight: 700, o: 0 });
+    const n = T(p, '−11 000 m', { x: 800, y: 400, size: 96, fill: C_VIRUS, anchor: 'middle', weight: 700, o: 0 });
     put(n, { s: .2 }); pop(n, m('s'));
-    text(p, 'Point le plus profond des ocÃ©ans (ocÃ©an Pacifique).', 800, 540, m('s', .6), { size: 34, fill: COL.dim, anchor: 'middle' });
+    text(p, 'Point le plus profond des océans (océan Pacifique).', 800, 540, m('s', .6), { size: 34, fill: COL.dim, anchor: 'middle' });
   }],
   ['wrap', 'Bilan du chapitre', (m) => {
     const p = panel(0);
-    [['La surface de la Terre est dÃ©coupÃ©e en plaques rigides qui glissent sur l'asthÃ©nosphÃ¨re.', 'w1'],
-     ['Les plaques s'Ã©cartent aux dorsales et se rapprochent aux zones de subduction et de collision.', 'w2'],
-     ['Un sÃ©isme naÃ®t au foyer, en profondeur ; l'Ã©picentre est le point en surface le plus touchÃ©.', 'w3'],
-     ['Volcans effusifs : coulÃ©es de lave Â· volcans explosifs : cendres et nuÃ©es ardentes.', 'w4']].forEach(([str, mk_], i) => {
+    [['La surface de la Terre est découpée en plaques rigides qui glissent sur l’asthénosphère.', 'w1'],
+     ['Les plaques s’écartent aux dorsales et se rapprochent aux zones de subduction et de collision.', 'w2'],
+     ['Un séisme naît au foyer, en profondeur ; l’épicentre est le point en surface le plus touché.', 'w3'],
+     ['Volcans effusifs : coulées de lave · volcans explosifs : cendres et nuées ardentes.', 'w4']].forEach(([str, mk_], i) => {
       const g = G(p, { x: -16, y: 240 + i * 130, o: 0 });
       mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
       T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
@@ -104,17 +104,17 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
-    { id: 'c-struct', prompt: ['Quelle est la diffÃ©rence fondamentale entre la lithosphÃ¨re et l'asthÃ©nosphÃ¨re ?'],
-      build: blanks([{ parts: [{ box: 'rigide et cassante' }, ' (lithosphÃ¨re) vs ', { box: 'solide et ductile' }, ' (asthÃ©nosphÃ¨re)'], why: 'La lithosphÃ¨re est rigide et cassante ; l'asthÃ©nosphÃ¨re est solide mais dÃ©formable (ductile).', hint: 'Relis le paragraphe Â« La structure du globe Â».' }]) },
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-struct', prompt: ['Quelle est la différence fondamentale entre la lithosphère et l’asthénosphère ?'],
+      build: blanks([{ parts: [{ box: 'rigide et cassante' }, ' (lithosphère) vs ', { box: 'solide et ductile' }, ' (asthénosphère)'], why: 'La lithosphère est rigide et cassante ; l’asthénosphère est solide mais déformable (ductile).', hint: 'Relis le paragraphe « La structure du globe ».' }]) },
   ], done) }],
-  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
-    { id: 'c-foyer', prompt: ['Le foyer d'un sÃ©isme est toujours situÃ© exactement en surface du sol.'],
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-foyer', prompt: ['Le foyer d’un séisme est toujours situé exactement en surface du sol.'],
       build: choice([['VRAI'], ['FAUX']], 1,
-        'Le foyer (ou hypocentre) est le lieu de la rupture en profondeur ; l'Ã©picentre est le point en surface Ã  sa verticale.',
-        [null, 'Le foyer est souterrain.', 'L'Ã©picentre se situe Ã  la surface, au-dessus du foyer.']) },
+        'Le foyer (ou hypocentre) est le lieu de la rupture en profondeur ; l’épicentre est le point en surface à sa verticale.',
+        [null, 'Le foyer est souterrain.', 'L’épicentre se situe à la surface, au-dessus du foyer.']) },
   ], done) }],
-  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+  ['finish', 'Terminé', () => { panel(0); }, { ask: finishCard }],
 ].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
 
 boot();

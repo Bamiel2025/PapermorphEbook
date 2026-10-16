@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Monde microbien & systÃ¨me immunitaire â€” Ebook SVT Cycle 4</title>
+<title>Monde microbien & système immunitaire — Ebook SVT Cycle 4</title>
 <link rel="stylesheet" href="../lib/engine.css">
 <link rel="expect" href="#bar" blocking="render">
 <style>
@@ -20,7 +20,7 @@
 <script src="audio/fr/timings.js"></script>
 <script>
 'use strict';
-const CHAPTER = { number: 11, title: 'Monde microbien & systÃ¨me immunitaire', minutes: 6, language: 'fr', next: '../ch12/' };
+const CHAPTER = { number: 11, title: 'Monde microbien & système immunitaire', minutes: 6, language: 'fr', next: '../ch12/' };
 
 const mline = (p, parts, x, y, t0, fill = COL.chalk, size = 48, anchor = 'middle') => { const e = M(p, [].concat(parts), { x, y, size, fill, anchor, o: 0 }); show(e, t0); return e; };
 const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start', weight = 500 } = {}) => { const e = T(p, str, { x, y, size, fill, anchor, weight, o: 0 }); show(e, t0); return e; };
@@ -28,71 +28,71 @@ const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start',
 const BEATS = [
   ['intro', 'TOPIC', (m, D) => {
     const g = G(scene, { o: 0, y: 24 });
-    T(g, 'SVT Â· Cycle 4 Â· Chapitre 3.3', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'SVT · Cycle 4 · Chapitre 3.3', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
     T(g, 'Monde microbien', { x: 800, y: 420, size: 84, weight: 600, anchor: 'middle' });
-    T(g, '& systÃ¨me immunitaire', { x: 800, y: 520, size: 84, weight: 600, anchor: 'middle' });
+    T(g, '& système immunitaire', { x: 800, y: 520, size: 84, weight: 600, anchor: 'middle' });
     tw(g, { o: 1, y: 0 }, .2, 1.1, out);
     const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
     show(v, 1, .6);
-    const r = text(scene, 'Comment notre corps se dÃ©fend-il contre les microbes ?', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    const r = text(scene, 'Comment notre corps se défend-il contre les microbes ?', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
     tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
   }],
   ['probleme', 'Microbes : contamination ou infection ?', (m) => {
     const p = panel(0);
     const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
     show(card, .1, .5);
-    text(p, 'Chapitre 3.3 â€” Monde microbien & systÃ¨me immunitaire', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
-    ['Â« Des milliards de micro-organismes (bactÃ©ries, virus)', 'vivent autour de nous et sur notre corps.', 'La plupart sont inoffensifs ou utiles,', 'mais certains peuvent nous rendre malades. Â»'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
-    text(p, 'Peau et muqueuses = barriÃ¨res naturelles', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
-    text(p, 'Contamination = entrÃ©e des microbes', 1050, 290, .45, { size: 24, fill: C_VIRUS, weight: 700 });
+    text(p, 'Chapitre 3.3 — Monde microbien & système immunitaire', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['« Des milliards de micro-organismes (bactéries, virus)', 'vivent autour de nous et sur notre corps.', 'La plupart sont inoffensifs ou utiles,', 'mais certains peuvent nous rendre malades. »'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
+    text(p, 'Peau et muqueuses = barrières naturelles', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'Contamination = entrée des microbes', 1050, 290, .45, { size: 24, fill: C_VIRUS, weight: 700 });
     text(p, 'Infection = multiplication des microbes', 1050, 350, .7, { size: 24, fill: C_VIRUS, weight: 700 });
     const tx = G(p, { o: 0 });
     mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
     T(tx, 'Phagocytes et lymphocytes', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
-    T(tx, 'dÃ©fenses rapides et sur mesure', { x: 1122, y: 615, size: 26, fill: COL.dim });
+    T(tx, 'défenses rapides et sur mesure', { x: 1122, y: 615, size: 26, fill: COL.dim });
     show(tx, m('start'), .6);
-    text(p, 'Se laver les mains et dÃ©sinfecter une plaie permet d'Ã©viter la contamination.', 160, 640, 1.2, { size: 27, fill: COL.dim });
+    text(p, 'Se laver les mains et désinfecter une plaie permet d’éviter la contamination.', 160, 640, 1.2, { size: 27, fill: COL.dim });
   }],
   ['n1', 'Contamination et infection', (m) => {
     const p = panel(0);
-    text(p, 'Deux mots, deux Ã©tapes', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    pnum(p, 330, 260, 'Contamination', 'entrÃ©e des microbes dans le corps', C_VIRUS, m('a'));
+    text(p, 'Deux mots, deux étapes', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Contamination', 'entrée des microbes dans le corps', C_VIRUS, m('a'));
     pnum(p, 970, 260, 'Infection', 'multiplication des microbes', C_VAC, m('b'));
-    text(p, 'Les globules blancs appelÃ©s phagocytes arrivent rapidement et &#34;mangent&#34; les microbes : c'est la phagocytose.', 800, 470, m('b', .6), { size: 28, fill: COL.dim, anchor: 'middle', weight: 600 });
+    text(p, 'Les globules blancs appelés phagocytes arrivent rapidement et « mangent » les microbes : c’est la phagocytose.', 800, 470, m('b', .6), { size: 28, fill: COL.dim, anchor: 'middle', weight: 600 });
   }],
-  ['n2', 'DÃ©fenses sur mesure', (m) => {
+  ['n2', 'Défenses sur mesure', (m) => {
     const p = panel(0);
     text(p, 'Anticorps et lymphocytes', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
     const row = chipsRow(p, [
-      { t: 'Phagocytose : rÃ©ponse rapide', col: C_CAS },
+      { t: 'Phagocytose : réponse rapide', col: C_CAS },
       { t: 'Lymphocytes B : anticorps sur mesure', col: C_SEUIL },
-      { t: 'Lymphocytes T : dÃ©truisent cellules infectÃ©es', col: C_EXTRA }
+      { t: 'Lymphocytes T : détruisent cellules infectées', col: C_EXTRA }
     ], 260, 330, { size: 25, gap: 80 });
     chipsIn(row, 0, m('c')); chipsIn(row, 1, m('c', .7)); chipsIn(row, 2, m('d'));
-    text(p, 'Un antigÃ¨ne est un Ã©lÃ©ment Ã©tranger reconnu par nos dÃ©fenses.', 800, 520, m('d', .9), { size: 28, fill: COL.dim, anchor: 'middle' });
-    text(p, 'Un anticorps se fixe prÃ©cisÃ©ment sur un antigÃ¨ne comme une clÃ© dans une serrure.', 800, 566, m('d', 1.2), { size: 28, fill: COL.dim, anchor: 'middle' });
+    text(p, 'Un antigène est un élément étranger reconnu par nos défenses.', 800, 520, m('d', .9), { size: 28, fill: COL.dim, anchor: 'middle' });
+    text(p, 'Un anticorps se fixe précisément sur un antigène comme une clé dans une serrure.', 800, 566, m('d', 1.2), { size: 28, fill: COL.dim, anchor: 'middle' });
   }],
-  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+  ['retenir', 'À retenir (B.O.)', (m) => {
     const p = panel(0);
-    text(p, 'Le cÅ“ur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    pnum(p, 330, 260, 'Contamination â†” Infection', 'entrÃ©e â†’ multiplication', C_VIRUS, m('r1'));
-    pnum(p, 970, 260, 'Phagocytose â†” Anticorps', 'dÃ©fense rapide â†” dÃ©fense sur mesure', C_SEUIL, m('r2'));
-    text(p, 'Un vaccin contre le papillomavirus (HPV) protÃ¨ge les filles et les garÃ§ons contre certains cancers.', 800, 470, m('r2', .6), { size: 26, fill: COL.dim, anchor: 'middle', weight: 600 });
+    text(p, 'Le cœur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Contamination ↔ Infection', 'entrée → multiplication', C_VIRUS, m('r1'));
+    pnum(p, 970, 260, 'Phagocytose ↔ Anticorps', 'défense rapide ↔ défense sur mesure', C_SEUIL, m('r2'));
+    text(p, 'Un vaccin contre le papillomavirus (HPV) protège les filles et les garçons contre certains cancers.', 800, 470, m('r2', .6), { size: 26, fill: COL.dim, anchor: 'middle', weight: 600 });
   }],
   ['savoir', 'Le saviez-vous ?', (m) => {
     const p = panel(0);
-    text(p, 'MÃ©moire immunitaire', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    text(p, 'Notre corps garde en mÃ©moire presque', 800, 400, m('s'), { size: 34, fill: COL.chalk, anchor: 'middle' });
-    text(p, 'tous les microbes qu'il a dÃ©jÃ  combattus,', 800, 450, m('s', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
-    text(p, 'grÃ¢ce aux lymphocytes mÃ©moires !', 800, 498, m('s', .7), { size: 30, fill: C_VIRUS, anchor: 'middle', weight: 700 });
+    text(p, 'Mémoire immunitaire', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    text(p, 'Notre corps garde en mémoire presque', 800, 400, m('s'), { size: 34, fill: COL.chalk, anchor: 'middle' });
+    text(p, 'tous les microbes qu’il a déjà combattus,', 800, 450, m('s', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'grâce aux lymphocytes mémoires !', 800, 498, m('s', .7), { size: 30, fill: C_VIRUS, anchor: 'middle', weight: 700 });
   }],
   ['wrap', 'Bilan du chapitre', (m) => {
     const p = panel(0);
-    [['La peau et les muqueuses empÃªchent la contamination par les microbes.', 'w1'],
-     ['La phagocytose est la premiÃ¨re rÃ©action rapide pour Ã©liminer les intrus.', 'w2'],
-     ['Les lymphocytes B produisent des anticorps spÃ©cifiques ; les lymphocytes T Ã©liminent les cellules infectÃ©es.', 'w3'],
-     ['La vaccination permet d'entraÃ®ner le systÃ¨me immunitaire sans Ãªtre malade.', 'w4'],
-     ['Les antibiotiques Ã©liminent uniquement les bactÃ©ries, jamais les virus.', 'w5']].forEach(([str, mk_], i) => {
+    [['La peau et les muqueuses empêchent la contamination par les microbes.', 'w1'],
+     ['La phagocytose est la première réaction rapide pour éliminer les intrus.', 'w2'],
+     ['Les lymphocytes B produisent des anticorps spécifiques ; les lymphocytes T éliminent les cellules infectées.', 'w3'],
+     ['La vaccination permet d’entraîner le système immunitaire sans être malade.', 'w4'],
+     ['Les antibiotiques éliminent uniquement les bactéries, jamais les virus.', 'w5']].forEach(([str, mk_], i) => {
       const g = G(p, { x: -16, y: 240 + i * 112, o: 0 });
       mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
       T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
@@ -100,19 +100,19 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
-    { id: 'c-antibio', prompt: ['Contre quel type d'agent infectieux les antibiotiques sont-ils exclusivement efficaces ?'],
-      build: choice([['Contre les virus comme le virus de la grippe.'], ['Uniquement contre les bactÃ©ries.'], ['Contre tous les microbes sans exception.'], ['Uniquement contre le venin de serpent.']], 1,
-        'Les antibiotiques ciblent des structures cellulaires bactÃ©riennes (comme la paroi bactÃ©rienne) et n'ont strictement aucun effet sur les virus.',
-        [null, 'Les antibiotiques n'agissent pas sur les virus (grippe, rhume...).', 'Ils n'agissent que sur les bactÃ©ries.', 'Ils n'agissent pas sur le venin non plus.']) },
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-antibio', prompt: ['Contre quel type d’agent infectieux les antibiotiques sont-ils exclusivement efficaces ?'],
+      build: choice([['Contre les virus comme le virus de la grippe.'], ['Uniquement contre les bactéries.'], ['Contre tous les microbes sans exception.'], ['Uniquement contre le venin de serpent.']], 1,
+        'Les antibiotiques ciblent des structures cellulaires bactériennes (comme la paroi bactérienne) et n’ont strictement aucun effet sur les virus.',
+        [null, 'Les antibiotiques n’agissent pas sur les virus (grippe, rhume…).', 'Ils n’agissent que sur les bactéries.', 'Ils n’agissent pas sur le venin non plus.']) },
   ], done) }],
-  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
-    { id: 'c-vaccin', prompt: ['La vaccination consiste Ã  injecter un microbe mortel actif pour tuer immÃ©diatement les globules blancs.'],
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-vaccin', prompt: ['La vaccination consiste à injecter un microbe mortel actif pour tuer immédiatement les globules blancs.'],
       build: choice([['VRAI'], ['FAUX']], 1,
-        'La vaccination injecte un antigÃ¨ne inoffensif (ou attÃ©nuÃ©) pour entraÃ®ner le systÃ¨me immunitaire et crÃ©er des lymphocytes mÃ©moires sans provoquer la maladie.',
-        [null, 'Le vaccin n'est pas un microbe mortel actif.', 'Il entraÃ®ne le systÃ¨me immunitaire sans provoquer la maladie.']) },
+        'La vaccination injecte un antigène inoffensif (ou atténué) pour entraîner le système immunitaire et créer des lymphocytes mémoires sans provoquer la maladie.',
+        [null, 'Le vaccin n’est pas un microbe mortel actif.', 'Il entraîne le système immunitaire sans provoquer la maladie.']) },
   ], done) }],
-  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+  ['finish', 'Terminé', () => { panel(0); }, { ask: finishCard }],
 ].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
 
 boot();

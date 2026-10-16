@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reproduction humaine & protection â€” Ebook SVT Cycle 4</title>
+<title>Reproduction humaine & sexualité responsable — Ebook SVT Cycle 4</title>
 <link rel="stylesheet" href="../lib/engine.css">
 <link rel="expect" href="#bar" blocking="render">
 <style>
@@ -20,7 +20,7 @@
 <script src="audio/fr/timings.js"></script>
 <script>
 'use strict';
-const CHAPTER = { number: 12, title: 'Reproduction humaine & sexualitÃ© responsable', minutes: 5, language: 'fr' };
+const CHAPTER = { number: 12, title: 'Reproduction humaine & sexualité responsable', minutes: 5, language: 'fr' };
 
 const mline = (p, parts, x, y, t0, fill = COL.chalk, size = 48, anchor = 'middle') => { const e = M(p, [].concat(parts), { x, y, size, fill, anchor, o: 0 }); show(e, t0); return e; };
 const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start', weight = 500 } = {}) => { const e = T(p, str, { x, y, size, fill, anchor, weight, o: 0 }); show(e, t0); return e; };
@@ -28,72 +28,72 @@ const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start',
 const BEATS = [
   ['intro', 'TOPIC', (m, D) => {
     const g = G(scene, { o: 0, y: 24 });
-    T(g, 'SVT Â· Cycle 4 Â· Chapitre 3.4', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'SVT · Cycle 4 · Chapitre 3.4', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
     T(g, 'Reproduction humaine', { x: 800, y: 420, size: 84, weight: 600, anchor: 'middle' });
-    T(g, '& sexualitÃ© responsable', { x: 800, y: 520, size: 84, weight: 600, anchor: 'middle' });
+    T(g, '& sexualité responsable', { x: 800, y: 520, size: 84, weight: 600, anchor: 'middle' });
     tw(g, { o: 1, y: 0 }, .2, 1.1, out);
     const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
     show(v, 1, .6);
-    const r = text(scene, 'PubertÃ©, organes reproducteurs et moyens de protection.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    const r = text(scene, 'Puberté, organes reproducteurs et moyens de protection.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
     tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
   }],
-  ['probleme', 'PubertÃ© et protection', (m) => {
+  ['probleme', 'Puberté et protection', (m) => {
     const p = panel(0);
     const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
     show(card, .1, .5);
-    text(p, 'Chapitre 3.4 â€” Reproduction humaine & sexualitÃ© responsable', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
-    ['Â« Ã€ la pubertÃ©, le corps se transforme pour devenir', 'capable de se reproduire. Comprendre le fonctionnement', 'des organes reproducteurs et les moyens de protection', 'permet de vivre sa vie affective et sexuelle de maniÃ¨re', 'sereine et responsable. Â»'].forEach((l, i) => text(p, l, 160, 280 + i * 44, .5 + i * .2, { size: 32, fill: COL.chalk }));
-    text(p, 'PubertÃ© :', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
-    text(p, 'homme : spermatozoÃ¯des en continu', 1050, 290, .45, { size: 24, fill: C_VIRUS, weight: 700 });
+    text(p, 'Chapitre 3.4 — Reproduction humaine & sexualité responsable', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['« À la puberté, le corps se transforme pour devenir', 'capable de se reproduire. Comprendre le fonctionnement', 'des organes reproducteurs et les moyens de protection', 'permet de vivre sa vie affective et sexuelle de manière', 'sereine et responsable. »'].forEach((l, i) => text(p, l, 160, 280 + i * 44, .5 + i * .2, { size: 32, fill: COL.chalk }));
+    text(p, 'Puberté :', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'homme : spermatozoïdes en continu', 1050, 290, .45, { size: 24, fill: C_VIRUS, weight: 700 });
     text(p, 'femme : cycle ~28 jours, ovulation J14', 1050, 350, .7, { size: 24, fill: C_SEUIL, weight: 700 });
     text(p, 'Contraception :', 1050, 410, .9, { size: 30, fill: COL.dim, weight: 600 });
-    text(p, 'pilule, stÃ©rilet, implant', 1050, 460, 1.1, { size: 24, fill: COL.dim });
+    text(p, 'pilule, stérilet, implant', 1050, 460, 1.1, { size: 24, fill: COL.dim });
     const tx = G(p, { o: 0 });
     mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
-    T(tx, 'PrÃ©servatif : seul moyen IST + grossesse', { x: 1122, y: 569, size: 28, fill: C_VIRUS, weight: 700 });
+    T(tx, 'Préservatif : seul moyen IST + grossesse', { x: 1122, y: 569, size: 28, fill: C_VIRUS, weight: 700 });
     T(tx, 'consentement mutuel indispensable', { x: 1122, y: 615, size: 24, fill: COL.dim });
     show(tx, m('start'), .6);
-    text(p, 'Le vaccin contre le papillomavirus (HPV) protÃ¨ge contre certains cancers.', 160, 640, 1.2, { size: 27, fill: COL.dim });
+    text(p, 'Le vaccin contre le papillomavirus (HPV) protège contre certains cancers.', 160, 640, 1.2, { size: 27, fill: COL.dim });
   }],
-  ['n1', 'PubertÃ© et cycles reproducteurs', (m) => {
+  ['n1', 'Puberté et cycles reproducteurs', (m) => {
     const p = panel(0);
     text(p, 'Le corps se transforme', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    pnum(p, 330, 260, 'GarÃ§ons', 'spermatozoÃ¯des en continu', C_VIRUS, m('a'));
+    pnum(p, 330, 260, 'Garçons', 'spermatozoïdes en continu', C_VIRUS, m('a'));
     pnum(p, 970, 260, 'Filles', 'ovulation ~ tous les 28 jours', C_VAC, m('b'));
-    text(p, 'La fÃ©condation a lieu dans les trompes ; Ã  la mÃ©nopause (vers 50 ans), les cycles s'arrÃªtent.', 800, 470, m('b', .6), { size: 28, fill: COL.dim, anchor: 'middle', weight: 600 });
+    text(p, 'La fécondation a lieu dans les trompes ; à la ménopause (vers 50 ans), les cycles s’arrêtent.', 800, 470, m('b', .6), { size: 28, fill: COL.dim, anchor: 'middle', weight: 600 });
   }],
   ['n2', 'Hormones et protection', (m) => {
     const p = panel(0);
     text(p, 'Des messagers chimiques et un moyen de protection', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
     const row = chipsRow(p, [
-      { t: 'Hypophyse â†’ testicules/ovaires', col: C_CAS },
-      { t: 'TestostÃ©rone / Å“strogÃ¨nes + progestÃ©rone', col: C_SEUIL },
-      { t: 'PrÃ©servatif = seule protection IST + grossesse', col: C_EXTRA }
+      { t: 'Hypophyse → testicules/ovaires', col: C_CAS },
+      { t: 'Testostérone / œstrogènes + progestérone', col: C_SEUIL },
+      { t: 'Préservatif = seule protection IST + grossesse', col: C_EXTRA }
     ], 260, 330, { size: 25, gap: 80 });
     chipsIn(row, 0, m('c')); chipsIn(row, 1, m('c', .7)); chipsIn(row, 2, m('d'));
-    text(p, 'Consentement mutuel et respect de l'autre sont indispensables.', 800, 520, m('d', .9), { size: 28, fill: COL.dim, anchor: 'middle' });
-    text(p, 'Vaccin HPV : protÃ¨ge contre certains cancers.', 800, 566, m('d', 1.2), { size: 28, fill: COL.dim, anchor: 'middle' });
+    text(p, 'Consentement mutuel et respect de l’autre sont indispensables.', 800, 520, m('d', .9), { size: 28, fill: COL.dim, anchor: 'middle' });
+    text(p, 'Vaccin HPV : protège contre certains cancers.', 800, 566, m('d', 1.2), { size: 28, fill: COL.dim, anchor: 'middle' });
   }],
-  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+  ['retenir', 'À retenir (B.O.)', (m) => {
     const p = panel(0);
-    text(p, 'Le cÅ“ur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    pnum(p, 330, 260, 'PubertÃ©', 'homme : continu Â· femme : cycle ~28 j', C_VAC, m('r1'));
-    pnum(p, 970, 260, 'PrÃ©servatif', 'seul moyen contre les IST', C_SEUIL, m('r2'));
-    text(p, 'La contraception permet de choisir d'avoir un enfant ou non.', 800, 470, m('r2', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+    text(p, 'Le cœur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Puberté', 'homme : continu · femme : cycle ~28 j', C_VAC, m('r1'));
+    pnum(p, 970, 260, 'Préservatif', 'seul moyen contre les IST', C_SEUIL, m('r2'));
+    text(p, 'La contraception permet de choisir d’avoir un enfant ou non.', 800, 470, m('r2', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
   }],
   ['savoir', 'Le saviez-vous ?', (m) => {
     const p = panel(0);
-    text(p, '1 000 spermatozoÃ¯des par seconde', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    const n = T(p, 'chez l'homme adulte', { x: 800, y: 400, size: 44, fill: C_VIRUS, anchor: 'middle', weight: 700, o: 0 });
+    text(p, '1 000 spermatozoïdes par seconde', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    const n = T(p, 'chez l’homme adulte', { x: 800, y: 400, size: 44, fill: C_VIRUS, anchor: 'middle', weight: 700, o: 0 });
     put(n, { s: .2 }); pop(n, m('s'));
     text(p, 'tout au long de sa vie.', 800, 490, m('s', .6), { size: 30, fill: COL.dim, anchor: 'middle' });
   }],
   ['wrap', 'Bilan du chapitre', (m) => {
     const p = panel(0);
-    [['La pubertÃ© est dÃ©clenchÃ©e par des hormones qui activent les organes reproducteurs.', 'w1'],
-     ['Chez l'homme, la production de spermatozoÃ¯des est continue ; chez la femme, le cycle dure environ 28 jours.', 'w2'],
-     ['La contraception permet de choisir d'avoir un enfant ou non.', 'w3'],
-     ['Le prÃ©servatif est le seul moyen de protection contre les Infections Sexuellement Transmissibles (IST).', 'w4']].forEach(([str, mk_], i) => {
+    [['La puberté est déclenchée par des hormones qui activent les organes reproducteurs.', 'w1'],
+     ['Chez l’homme, la production de spermatozoïdes est continue ; chez la femme, le cycle dure environ 28 jours.', 'w2'],
+     ['La contraception permet de choisir d’avoir un enfant ou non.', 'w3'],
+     ['Le préservatif est le seul moyen de protection contre les Infections Sexuellement Transmissibles (IST).', 'w4']].forEach(([str, mk_], i) => {
       const g = G(p, { x: -16, y: 240 + i * 130, o: 0 });
       mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
       T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
@@ -101,19 +101,19 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
-    { id: 'c-preservatif', prompt: ['Quel est le seul moyen de contraception qui protÃ¨ge Ã©galement contre les Infections Sexuellement Transmissibles (comme le VIH) ?'],
-      build: choice([['La pilule contraceptive hormonale.'], ['Le stÃ©rilet en cuivre.'], ['Le prÃ©servatif (masculin ou fÃ©minin).'], ['Le calcul du jour thÃ©orique d'ovulation.']], 2,
-        'Seul le prÃ©servatif forme une barriÃ¨re physique Ã©tanche empÃªchant la transmission des virus et bactÃ©ries des IST.',
-        [null, 'La pilule empÃªche l'ovulation mais ne protÃ¨ge pas des IST.', 'Le stÃ©rilet empÃªche la nidification mais ne protÃ¨ge pas des IST.', 'Le calcul de l'ovulation ne protÃ¨ge pas des IST.']) },
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-preservatif', prompt: ['Quel est le seul moyen de contraception qui protège également contre les Infections Sexuellement Transmissibles (comme le VIH) ?'],
+      build: choice([['La pilule contraceptive hormonale.'], ['Le stérilet en cuivre.'], ['Le préservatif (masculin ou féminin).'], ['Le calcul du jour théorique d’ovulation.']], 2,
+        'Seul le préservatif forme une barrière physique étanche empêchant la transmission des virus et bactéries des IST.',
+        [null, 'La pilule empêche l’ovulation mais ne protège pas des IST.', 'Le stérilet empêche la nidification mais ne protège pas des IST.', 'Le calcul de l’ovulation ne protège pas des IST.']) },
   ], done) }],
-  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
-    { id: 'c-regles', prompt: ['Les rÃ¨gles correspondent Ã  la destruction d'un os dans le bassin de la femme.'],
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-regles', prompt: ['Les règles correspondent à la destruction d’un os dans le bassin de la femme.'],
       build: choice([['VRAI'], ['FAUX']], 1,
-        'Les rÃ¨gles correspondent Ã  l'Ã©limination de la couche superficielle de la muqueuse utÃ©rine (endomÃ¨tre) gorgÃ©e de vaisseaux sanguins en l'absence de fÃ©condation.',
-        [null, 'Il n'y a pas d'os dÃ©truit dans le bassin.', 'Les rÃ¨gles concernent la muqueuse de l'utÃ©rus (endomÃ¨tre).']) },
+        'Les règles correspondent à l’élimination de la couche superficielle de la muqueuse utérine (endomètre) gorgée de vaisseaux sanguins en l’absence de fécondation.',
+        [null, 'Il n’y a pas d’os détruit dans le bassin.', 'Les règles concernent la muqueuse de l’utérus (endomètre).']) },
   ], done) }],
-  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+  ['finish', 'Terminé', () => { panel(0); }, { ask: finishCard }],
 ].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
 
 boot();

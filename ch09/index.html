@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Effort musculaire & systÃ¨me nerveux â€” Ebook SVT Cycle 4</title>
+<title>Effort musculaire & système nerveux — Ebook SVT Cycle 4</title>
 <link rel="stylesheet" href="../lib/engine.css">
 <link rel="expect" href="#bar" blocking="render">
 <style>
@@ -20,7 +20,7 @@
 <script src="audio/fr/timings.js"></script>
 <script>
 'use strict';
-const CHAPTER = { number: 9, title: 'Effort musculaire & systÃ¨me nerveux', minutes: 6, language: 'fr', next: '../ch10/' };
+const CHAPTER = { number: 9, title: 'Effort musculaire & système nerveux', minutes: 6, language: 'fr', next: '../ch10/' };
 
 const mline = (p, parts, x, y, t0, fill = COL.chalk, size = 48, anchor = 'middle') => { const e = M(p, [].concat(parts), { x, y, size, fill, anchor, o: 0 }); show(e, t0); return e; };
 const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start', weight = 500 } = {}) => { const e = T(p, str, { x, y, size, fill, anchor, weight, o: 0 }); show(e, t0); return e; };
@@ -28,44 +28,44 @@ const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start',
 const BEATS = [
   ['intro', 'TOPIC', (m, D) => {
     const g = G(scene, { o: 0, y: 24 });
-    T(g, 'SVT Â· Cycle 4 Â· Chapitre 3.1', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'SVT · Cycle 4 · Chapitre 3.1', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
     T(g, 'Effort musculaire', { x: 800, y: 420, size: 84, weight: 600, anchor: 'middle' });
-    T(g, '& systÃ¨me nerveux', { x: 800, y: 520, size: 84, weight: 600, anchor: 'middle' });
+    T(g, '& système nerveux', { x: 800, y: 520, size: 84, weight: 600, anchor: 'middle' });
     tw(g, { o: 1, y: 0 }, .2, 1.1, out);
     const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
     show(v, 1, .6);
-    const r = text(scene, 'Muscles, cÅ“ur, poumons et cerveau s'adaptent Ã  l'effort.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    const r = text(scene, 'Muscles, cœur, poumons et cerveau s’adaptent à l’effort.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
     tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
   }],
-  ['probleme', 'Le corps Ã  l'effort', (m) => {
+  ['probleme', 'Le corps à l’effort', (m) => {
     const p = panel(0);
     const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
     show(card, .1, .5);
-    text(p, 'Chapitre 3.1 â€” Effort musculaire & systÃ¨me nerveux', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
-    ['Â« Courir, sauter, attraper un ballon :', 'lors d'un effort physique, notre corps s'adapte', 'immÃ©diatement grÃ¢ce Ã  la coordination', 'entre nos muscles, notre cÅ“ur, nos poumons et notre cerveau. Â»'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
+    text(p, 'Chapitre 3.1 — Effort musculaire & système nerveux', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['« Courir, sauter, attraper un ballon :', 'lors d’un effort physique, notre corps s’adapte', 'immédiatement grâce à la coordination', 'entre nos muscles, notre cœur, nos poumons et notre cerveau. »'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
     text(p, 'Muscles au travail :', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
-    text(p, 'plus d'O2 et de glucose, plus de CO2 et de chaleur', 1050, 290, .45, { size: 24, fill: C_VIRUS, weight: 700 });
-    text(p, 'CÅ“ur : bat plus vite', 1050, 370, .7, { size: 30, fill: COL.dim, weight: 600 });
-    text(p, 'Respiration : s'accÃ©lÃ¨re', 1050, 430, .9, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'plus d’O2 et de glucose, plus de CO2 et de chaleur', 1050, 290, .45, { size: 24, fill: C_VIRUS, weight: 700 });
+    text(p, 'Cœur : bat plus vite', 1050, 370, .7, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, 'Respiration : s’accélère', 1050, 430, .9, { size: 30, fill: COL.dim, weight: 600 });
     const tx = G(p, { o: 0 });
     mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
-    T(tx, 'SystÃ¨me nerveux', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
-    T(tx, 'Å“il â†’ nerf sensitif â†’ cerveau â†’ nerf moteur â†’ muscle', { x: 1122, y: 615, size: 22, fill: COL.dim, lineHeight: 1.25 });
+    T(tx, 'Système nerveux', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
+    T(tx, 'œil → nerf sensitif → cerveau → nerf moteur → muscle', { x: 1122, y: 615, size: 22, fill: COL.dim, lineHeight: 1.25 });
     show(tx, m('start'), .6);
-    text(p, 'La sueur permet d'Ã©vacuer la chaleur produite par les muscles.', 160, 640, 1.2, { size: 27, fill: COL.dim });
+    text(p, 'La sueur permet d’évacuer la chaleur produite par les muscles.', 160, 640, 1.2, { size: 27, fill: COL.dim });
   }],
-  ['n1', 'Le corps pendant l'effort', (m) => {
+  ['n1', 'Le corps pendant l’effort', (m) => {
     const p = panel(0);
-    text(p, 'Rythme cardiaque et respiratoire s'accÃ©lÃ¨rent', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    pnum(p, 330, 260, 'CÅ“ur', 'bat plus vite', C_VIRUS, m('a'));
-    pnum(p, 970, 260, 'Respiration', 's'accÃ©lÃ¨re', C_VAC, m('b'));
-    text(p, 'Apporter plus d'O2 et de glucose aux muscles.', 800, 470, m('b', .6), { size: 32, fill: COL.dim, anchor: 'middle', weight: 600 });
+    text(p, 'Rythme cardiaque et respiratoire s’accélèrent', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Cœur', 'bat plus vite', C_VIRUS, m('a'));
+    pnum(p, 970, 260, 'Respiration', 's’accélère', C_VAC, m('b'));
+    text(p, 'Apporter plus d’O2 et de glucose aux muscles.', 800, 470, m('b', .6), { size: 32, fill: COL.dim, anchor: 'middle', weight: 600 });
   }],
-  ['n2', 'Le systÃ¨me nerveux', (m) => {
+  ['n2', 'Le système nerveux', (m) => {
     const p = panel(0);
-    text(p, 'De l'organe des sens au muscle', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    text(p, 'De l’organe des sens au muscle', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
     const col = chipsCol(p, [
-      { t: 'Å’il (rÃ©cepteur)', col: C_VIRUS },
+      { t: 'Œil (récepteur)', col: C_VIRUS },
       { t: 'Nerf sensitif', col: C_CAS },
       { t: 'Cerveau (analyse)', col: C_SEUIL },
       { t: 'Nerf moteur', col: C_EXTRA },
@@ -74,26 +74,26 @@ const BEATS = [
     chipsColIn(col, 0, m('c')); chipsColIn(col, 1, m('c', .5)); chipsColIn(col, 2, m('d')); chipsColIn(col, 3, m('d', .5)); chipsColIn(col, 4, m('d'));
     text(p, 'Les neurones communiquent entre eux au niveau des synapses.', 800, 740, m('d', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
   }],
-  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+  ['retenir', 'À retenir (B.O.)', (m) => {
     const p = panel(0);
-    text(p, 'Le cÅ“ur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    pnum(p, 330, 260, 'Ã€ l'effort', 'cÅ“ur + respiration s'accÃ©lÃ¨rent', C_VIRUS, m('r1'));
-    pnum(p, 970, 260, 'Message nerveux', 'organe des sens â†’ muscle', C_VAC, m('r2'));
-    text(p, 'Sommeil rÃ©gulier et absence d'alcool ou de drogues prÃ©servent la santÃ© du cerveau.', 800, 470, m('r2', .6), { size: 28, fill: COL.dim, anchor: 'middle', weight: 600 });
+    text(p, 'Le cœur du chapitre', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'À l’effort', 'cœur + respiration s’accélèrent', C_VIRUS, m('r1'));
+    pnum(p, 970, 260, 'Message nerveux', 'organe des sens → muscle', C_VAC, m('r2'));
+    text(p, 'Sommeil régulier et absence d’alcool ou de drogues préservent la santé du cerveau.', 800, 470, m('r2', .6), { size: 28, fill: COL.dim, anchor: 'middle', weight: 600 });
   }],
   ['savoir', 'Le saviez-vous ?', (m) => {
     const p = panel(0);
     text(p, '86 milliards de neurones', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
     text(p, 'dans le cerveau humain,', 800, 400, m('s'), { size: 34, fill: COL.chalk, anchor: 'middle' });
-    text(p, 'qui communiquent Ã  toute vitesse', 800, 450, m('s', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
-    text(p, 'grÃ¢ce Ã  des signaux Ã©lectriques et chimiques.', 800, 498, m('s', .7), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'qui communiquent à toute vitesse', 800, 450, m('s', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'grâce à des signaux électriques et chimiques.', 800, 498, m('s', .7), { size: 30, fill: COL.dim, anchor: 'middle' });
   }],
   ['wrap', 'Bilan du chapitre', (m) => {
     const p = panel(0);
-    [['Pendant l'effort, le rythme cardiaque et respiratoire augmentent pour ravitailler les muscles en O2 et glucose.', 'w1'],
-     ['Le cerveau reÃ§oit les messages des organes des sens et commande les mouvements des muscles.', 'w2'],
+    [['Pendant l’effort, le rythme cardiaque et respiratoire augmentent pour ravitailler les muscles en O2 et glucose.', 'w1'],
+     ['Le cerveau reçoit les messages des organes des sens et commande les mouvements des muscles.', 'w2'],
      ['Les neurones communiquent entre eux au niveau des synapses.', 'w3'],
-     ['Un bon sommeil et l'absence d'alcool ou de drogues prÃ©servent la santÃ© du cerveau.', 'w4']].forEach(([str, mk_], i) => {
+     ['Un bon sommeil et l’absence d’alcool ou de drogues préservent la santé du cerveau.', 'w4']].forEach(([str, mk_], i) => {
       const g = G(p, { x: -16, y: 240 + i * 130, o: 0 });
       mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
       T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
@@ -101,19 +101,19 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
-    { id: 'c-nerf', prompt: ['Lorsqu'un Ã©lÃ¨ve voit une balle arriver et l'attrape avec sa main, quel est l'ordre chronologique exact des Ã©tapes ?'],
-      build: choice([['Muscle de la main â†’ Cerveau â†’ Å’il â†’ Nerf sensitif.'], ['Å’il (rÃ©cepteur) â†’ Nerf sensitif â†’ Cerveau (centre intÃ©grateur) â†’ Nerf moteur â†’ Muscle de la main (effecteur).'], ['Cerveau â†’ Å’il â†’ Muscle sans passage par les nerfs.'], ['Nerf moteur â†’ Å’il â†’ Moelle Ã©piniÃ¨re.']], 1,
-        'L'organe rÃ©cepteur capte le stimulus, le nerf sensitif achemine le message au cerveau, qui commande ensuite le muscle par le nerf moteur.',
-        [null, 'Le stimulus part de l'Å“il, pas du muscle.', 'Le cerveau n'agit pas tout seul : il reÃ§oit d'abord le message sensitif.', 'Le nerf moteur commande le muscle, il ne capte pas le stimulus.']) },
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-nerf', prompt: ['Lorsqu’un élève voit une balle arriver et l’attrape avec sa main, quel est l’ordre chronologique exact des étapes ?'],
+      build: choice([['Muscle de la main → Cerveau → Œil → Nerf sensitif.'], ['Œil (récepteur) → Nerf sensitif → Cerveau (centre intégrateur) → Nerf moteur → Muscle de la main (effecteur).'], ['Cerveau → Œil → Muscle sans passage par les nerfs.'], ['Nerf moteur → Œil → Moelle épinière.']], 1,
+        'L’organe récepteur capte le stimulus, le nerf sensitif achemine le message au cerveau, qui commande ensuite le muscle par le nerf moteur.',
+        [null, 'Le stimulus part de l’œil, pas du muscle.', 'Le cerveau n’agit pas tout seul : il reçoit d’abord le message sensitif.', 'Le nerf moteur commande le muscle, il ne capte pas le stimulus.']) },
   ], done) }],
-  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
-    { id: 'c-coeur', prompt: ['La frÃ©quence cardiaque diminue fortement pendant un sprint pour Ã©conomiser l'Ã©nergie du cÅ“ur.'],
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-coeur', prompt: ['La fréquence cardiaque diminue fortement pendant un sprint pour économiser l’énergie du cœur.'],
       build: choice([['VRAI'], ['FAUX']], 1,
-        'La frÃ©quence cardiaque augmente pour accÃ©lÃ©rer le dÃ©bit sanguin et acheminer davantage de dioxygÃ¨ne et de glucose aux muscles en activitÃ©.',
-        [null, 'Pendant un sprint, les muscles ont besoin de plus d'oxygÃ¨ne, pas de moins.', 'Le cÅ“ur accÃ©lÃ¨re pour rÃ©pondre Ã  la demande en O2 et nutriments.']) },
+        'La fréquence cardiaque augmente pour accélérer le débit sanguin et acheminer davantage de dioxygène et de glucose aux muscles en activité.',
+        [null, 'Pendant un sprint, les muscles ont besoin de plus d’oxygène, pas de moins.', 'Le cœur accélère pour répondre à la demande en O2 et nutriments.']) },
   ], done) }],
-  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+  ['finish', 'Terminé', () => { panel(0); }, { ask: finishCard }],
 ].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
 
 boot();

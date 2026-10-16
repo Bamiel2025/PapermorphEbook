@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Risques naturels & activitÃ©s humaines â€” Ebook SVT Cycle 4</title>
+<title>Risques naturels & activités humaines — Ebook SVT Cycle 4</title>
 <link rel="stylesheet" href="../lib/engine.css">
 <link rel="expect" href="#bar" blocking="render">
 <style>
@@ -20,7 +20,7 @@
 <script src="audio/fr/timings.js"></script>
 <script>
 'use strict';
-const CHAPTER = { number: 3, title: 'Risques naturels & activitÃ©s humaines', minutes: 5, language: 'fr', next: '../ch04/' };
+const CHAPTER = { number: 3, title: 'Risques naturels & activités humaines', minutes: 5, language: 'fr', next: '../ch04/' };
 
 const mline = (p, parts, x, y, t0, fill = COL.chalk, size = 48, anchor = 'middle') => { const e = M(p, [].concat(parts), { x, y, size, fill, anchor, o: 0 }); show(e, t0); return e; };
 const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start', weight = 500 } = {}) => { const e = T(p, str, { x, y, size, fill, anchor, weight, o: 0 }); show(e, t0); return e; };
@@ -28,72 +28,72 @@ const text = (p, str, x, y, t0, { size = 30, fill = COL.chalk, anchor = 'start',
 const BEATS = [
   ['intro', 'TOPIC', (m, D) => {
     const g = G(scene, { o: 0, y: 24 });
-    T(g, 'SVT Â· Cycle 4 Â· Chapitre 1.3', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
+    T(g, 'SVT · Cycle 4 · Chapitre 1.3', { x: 800, y: 290, size: 28, fill: COL.dim, anchor: 'middle' });
     T(g, 'Risques naturels', { x: 800, y: 420, size: 84, weight: 600, anchor: 'middle' });
-    T(g, '& activitÃ©s humaines', { x: 800, y: 520, size: 84, weight: 600, anchor: 'middle' });
+    T(g, '& activités humaines', { x: 800, y: 520, size: 84, weight: 600, anchor: 'middle' });
     tw(g, { o: 1, y: 0 }, .2, 1.1, out);
     const v = vxVirus(g, 1180, 300, 42, C_VIRUS);
     show(v, 1, .6);
-    const r = text(scene, 'SÃ©ismes, Ã©ruptions, inondations, cyclones : Ã©valuer les dangers pour mieux s'en protÃ©ger.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
+    const r = text(scene, 'Séismes, éruptions, inondations, cyclones : évaluer les dangers pour mieux s’en protéger.', 800, 660, m('sub'), { size: 32, fill: COL.dim, anchor: 'middle' });
     tw(g, { o: 0, y: -24 }, D - .9, .8); hide(r, D - .9, .8); hide(v, D - .9, .8);
   }],
-  ['probleme', 'Ã‰valuer le danger', (m) => {
+  ['probleme', 'Évaluer le danger', (m) => {
     const p = panel(0);
     const card = mk('rect', { x: 110, y: 170, width: 880, height: 560, rx: 22, fill: COL.board, stroke: COL.faint, 'stroke-width': 2, opacity: 0 }, p);
     show(card, .1, .5);
-    text(p, 'Chapitre 1.3 â€” Risques naturels & activitÃ©s humaines', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
-    ['Â« Face aux sÃ©ismes, aux Ã©ruptions volcaniques,', 'aux inondations ou aux cyclones,', 'les sociÃ©tÃ©s humaines apprennent Ã ', 'Ã©valuer les dangers pour mieux s'en protÃ©ger. Â»'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
-    text(p, 'Un fort sÃ©isme dans un dÃ©sert inhabitÃ©', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
-    text(p, '= risque trÃ¨s faible.', 1050, 290, .45, { size: 28, fill: COL.dim });
-    text(p, 'Un sÃ©isme moyen dans une ville dense', 1050, 330, .7, { size: 28, fill: COL.dim });
-    text(p, 'aux maisons fragiles = risque trÃ¨s Ã©levÃ©.', 1050, 370, .9, { size: 28, fill: COL.dim });
+    text(p, 'Chapitre 1.3 — Risques naturels & activités humaines', 160, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    ['« Face aux séismes, aux éruptions volcaniques,', 'aux inondations ou aux cyclones,', 'les sociétés humaines apprennent à', 'évaluer les dangers pour mieux s’en protéger. »'].forEach((l, i) => text(p, l, 160, 320 + i * 56, .5 + i * .25, { size: 36, fill: COL.chalk }));
+    text(p, 'Un fort séisme dans un désert inhabité', 1050, 230, .3, { size: 30, fill: COL.dim, weight: 600 });
+    text(p, '= risque très faible.', 1050, 290, .45, { size: 28, fill: COL.dim });
+    text(p, 'Un séisme moyen dans une ville dense', 1050, 330, .7, { size: 28, fill: COL.dim });
+    text(p, 'aux maisons fragiles = risque très élevé.', 1050, 370, .9, { size: 28, fill: COL.dim });
     const tx = G(p, { o: 0 });
     mk('circle', { cx: 1090, cy: 560, r: 14, fill: C_VIRUS }, tx);
-    T(tx, 'AlÃ©a Ã— VulnÃ©rabilitÃ© = Risque', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
+    T(tx, 'Aléa × Vulnérabilité = Risque', { x: 1122, y: 569, size: 30, fill: C_VIRUS, weight: 700 });
     T(tx, 'la formule du risque', { x: 1122, y: 615, size: 26, fill: COL.dim });
     show(tx, m('start'), .6);
-    text(p, 'On peut surveiller les volcans et la mÃ©tÃ©o,', 160, 640, 1.2, { size: 27, fill: COL.dim });
-    text(p, 'mais la date d'un sÃ©isme reste imprÃ©visible.', 160, 680, 1.45, { size: 27, fill: COL.dim });
+    text(p, 'On peut surveiller les volcans et la météo,', 160, 640, 1.2, { size: 27, fill: COL.dim });
+    text(p, 'mais la date d’un séisme reste imprévisible.', 160, 680, 1.45, { size: 27, fill: COL.dim });
   }],
-  ['n1', 'Risque = alÃ©a Ã— vulnÃ©rabilitÃ©', (m) => {
+  ['n1', 'Risque = aléa × vulnérabilité', (m) => {
     const p = panel(0);
-    text(p, 'Deux Ã©lÃ©ments font le risque', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    text(p, 'Deux éléments font le risque', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
     const row = chipsRow(p, [
-      { t: 'AlÃ©a : Ã©vÃ©nement dangereux', col: C_VIRUS },
-      { t: 'VulnÃ©rabilitÃ© : personnes exposÃ©es', col: C_CAS },
-      { t: 'Risque = AlÃ©a Ã— VulnÃ©rabilitÃ©', col: C_EXTRA }
+      { t: 'Aléa : événement dangereux', col: C_VIRUS },
+      { t: 'Vulnérabilité : personnes exposées', col: C_CAS },
+      { t: 'Risque = Aléa × Vulnérabilité', col: C_EXTRA }
     ], 260, 330, { size: 27, gap: 80 });
     chipsIn(row, 0, m('a')); chipsIn(row, 1, m('b')); chipsIn(row, 2, m('c'));
     text(p, 'Le risque est fort seulement si des personnes et des', 800, 520, m('c', .8), { size: 28, fill: COL.dim, anchor: 'middle' });
-    text(p, 'habitations fragiles se trouvent dans une zone menacÃ©e.', 800, 566, m('c', 1.1), { size: 28, fill: COL.dim, anchor: 'middle' });
+    text(p, 'habitations fragiles se trouvent dans une zone menacée.', 800, 566, m('c', 1.1), { size: 28, fill: COL.dim, anchor: 'middle' });
   }],
-  ['n2', 'PrÃ©voir et prÃ©venir', (m) => {
+  ['n2', 'Prévoir et prévenir', (m) => {
     const p = panel(0);
-    text(p, 'Surveiller, mais pas tout prÃ©dire', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    pnum(p, 330, 260, 'MÃ©tÃ©o, volcans', 'surveillables (satellites, capteurs, gaz, gaz de gonflement)', C_VAC, m('d'));
-    pnum(p, 970, 260, 'SÃ©ismes', 'date exacte imprÃ©visible', C_VIRUS, m('e'));
-    text(p, 'PrÃ©vention : plans d'urbanisme, constructions parasismiques, exercices d'Ã©vacuation.', 800, 470, m('e', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
+    text(p, 'Surveiller, mais pas tout prédire', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Météo, volcans', 'surveillables (satellites, capteurs)', C_VAC, m('d'));
+    pnum(p, 970, 260, 'Séismes', 'date exacte imprévisible', C_VIRUS, m('e'));
+    text(p, 'Prévention : plans d’urbanisme, constructions parasismiques, exercices d’évacuation.', 800, 470, m('e', .6), { size: 30, fill: COL.dim, anchor: 'middle', weight: 600 });
   }],
-  ['retenir', 'Ã€ retenir (B.O.)', (m) => {
+  ['retenir', 'À retenir (B.O.)', (m) => {
     const p = panel(0);
     text(p, 'Deux situations, deux risques', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    pnum(p, 330, 260, 'Risque trÃ¨s faible', 'sÃ©isme fort, dÃ©sert inhabitÃ©', C_SEUIL, m('r1'));
-    pnum(p, 970, 260, 'Risque trÃ¨s Ã©levÃ©', 'sÃ©isme moyen, ville dense, maisons fragiles', C_VIRUS, m('r2'));
-    text(p, 'Si les enjeux humains et matÃ©riels sont nuls (vulnÃ©rabilitÃ© = 0), le risque rÃ©sultant est nul, mÃªme en prÃ©sence d'un alÃ©a fort.', 800, 470, m('r2', .6), { size: 28, fill: COL.dim, anchor: 'middle', weight: 600 });
+    pnum(p, 330, 260, 'Risque très faible', 'séisme fort, désert inhabité', C_SEUIL, m('r1'));
+    pnum(p, 970, 260, 'Risque très élevé', 'séisme moyen, ville dense, maisons fragiles', C_VIRUS, m('r2'));
+    text(p, 'Si les enjeux humains et matériels sont nuls (vulnérabilité = 0), le risque résultant est nul, même en présence d’un aléa fort.', 800, 470, m('r2', .6), { size: 28, fill: COL.dim, anchor: 'middle', weight: 600 });
   }],
   ['savoir', 'Le saviez-vous ?', (m) => {
     const p = panel(0);
     text(p, 'Alerte sismique au Japon', 800, 110, .2, { size: 42, anchor: 'middle', weight: 600 });
-    text(p, 'Les tÃ©lÃ©phones reÃ§oivent une alerte sonore', 800, 400, m('s'), { size: 34, fill: COL.chalk, anchor: 'middle', weight: 600 });
-    text(p, 'quelques secondes avant l'arrivÃ©e des secousses.', 800, 454, m('s', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
-    text(p, 'de quoi permettre aux gens de s'abriter.', 800, 494, m('s', .7), { size: 26, fill: COL.dim, anchor: 'middle' });
+    text(p, 'Les téléphones reçoivent une alerte sonore', 800, 400, m('s'), { size: 34, fill: COL.chalk, anchor: 'middle', weight: 600 });
+    text(p, 'quelques secondes avant l’arrivée des secousses.', 800, 454, m('s', .4), { size: 30, fill: COL.dim, anchor: 'middle' });
+    text(p, 'de quoi permettre aux gens de s’abriter.', 800, 494, m('s', .7), { size: 26, fill: COL.dim, anchor: 'middle' });
   }],
   ['wrap', 'Bilan du chapitre', (m) => {
     const p = panel(0);
-    [['Le risque dÃ©pend du croisement entre un alÃ©a naturel et la vulnÃ©rabilitÃ© des personnes et des biens.', 'w1'],
-     ['Certains phÃ©nomÃ¨nes s'anticipent (mÃ©tÃ©o, volcans), mais la date exacte d'un sÃ©isme est imprÃ©visible.', 'w2'],
-     ['La prÃ©vention (plans d'urbanisme, constructions parasismiques) limite les dÃ©gÃ¢ts.', 'w3'],
-     ['ConnaÃ®tre les consignes de sÃ©curitÃ© permet d'adopter les bons rÃ©flexes en cas d'urgence.', 'w4']].forEach(([str, mk_], i) => {
+    [['Le risque dépend du croisement entre un aléa naturel et la vulnérabilité des personnes et des biens.', 'w1'],
+     ['Certains phénomènes s’anticipent (météo, volcans), mais la date exacte d’un séisme est imprévisible.', 'w2'],
+     ['La prévention (plans d’urbanisme, constructions parasismiques) limite les dégâts.', 'w3'],
+     ['Connaître les consignes de sécurité permet d’adopter les bons réflexes en cas d’urgence.', 'w4']].forEach(([str, mk_], i) => {
       const g = G(p, { x: -16, y: 240 + i * 130, o: 0 });
       mk('circle', { cx: 200, cy: -12, r: 26, fill: COL.task }, g);
       T(g, String(i + 1), { x: 200, y: -1, size: 30, fill: COL.board, weight: 700, anchor: 'middle' });
@@ -101,19 +101,19 @@ const BEATS = [
       tw(g, { o: 1, x: 0 }, m(mk_), .6);
     });
   }],
-  ['q1', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+  ['q1', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
     { id: 'c-risque', prompt: ['Dans quelle situation le risque sismique est-il le plus faible ?'],
-      build: choice([['Dans une mÃ©gapole cÃ´tiÃ¨re sur une faille active, habitations prÃ©caires.'], ['Dans une zone dÃ©sertique non habitÃ©e, mÃªme si l'alÃ©a sismique y est trÃ¨s Ã©levÃ©.'], ['Dans une ville historique construite sur des alluvions instables.'], ['Dans une zone industrielle chimique prÃ¨s d'une faille gÃ©ologique.']], 1,
-        'Si les enjeux humains et matÃ©riels sont nuls (vulnÃ©rabilitÃ© = 0), le risque rÃ©sultant est nul, mÃªme en prÃ©sence d'un alÃ©a fort.',
-        [null, 'Beaucoup d'habitations prÃ©caires sur une faille active : risque trÃ¨s Ã©levÃ©.', 'Des maisons fragiles en zone d'alluvions instables : risque Ã©levÃ©.', 'La vulnÃ©rabilitÃ© nulle annule le risque, mÃªme avec un alÃ©a fort.']) },
+      build: choice([['Dans une mégapole côtière sur une faille active, habitations précaires.'], ['Dans une zone désertique non habitée, même si l’aléa sismique y est très élevé.'], ['Dans une ville historique construite sur des alluvions instables.'], ['Dans une zone industrielle chimique près d’une faille géologique.']], 1,
+        'Si les enjeux humains et matériels sont nuls (vulnérabilité = 0), le risque résultant est nul, même en présence d’un aléa fort.',
+        [null, 'Beaucoup d’habitations précaires sur une faille active : risque très élevé.', 'Des maisons fragiles en zone d’alluvions instables : risque élevé.', 'La vulnérabilité nulle annule le risque, même avec un aléa fort.']) },
   ], done) }],
-  ['q2', 'VÃ©rification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
-    { id: 'c-predire', prompt: ['Les sismologues sont aujourd'hui capables d'indiquer l'heure et la minute prÃ©cises d'un sÃ©isme deux mois Ã  l'avance.'],
+  ['q2', 'Vérification rapide', () => { panel(0); }, { ask: done => quiz(BAND, [
+    { id: 'c-predire', prompt: ['Les sismologues sont aujourd’hui capables d’indiquer l’heure et la minute précises d’un séisme deux mois à l’avance.'],
       build: choice([['VRAI'], ['FAUX']], 1,
-        'L'Ã©tat actuel de la science ne permet pas de prÃ©dire la date et l'heure exacte d'un sÃ©isme.',
-        [null, 'On identifie les zones Ã  risque, mais pas la date exacte.', 'La prÃ©vention et les normes de construction sont capitales.']) },
+        'L’état actuel de la science ne permet pas de prédire la date et l’heure exacte d’un séisme.',
+        [null, 'On identifie les zones à risque, mais pas la date exacte.', 'La prévention et les normes de construction sont capitales.']) },
   ], done) }],
-  ['finish', 'TerminÃ©', () => { panel(0); }, { ask: finishCard }],
+  ['finish', 'Terminé', () => { panel(0); }, { ask: finishCard }],
 ].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
 
 boot();
